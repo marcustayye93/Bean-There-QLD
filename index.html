@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bean There QLD — family weekend &amp; school holiday finder</title>
+<meta name="description" content="Find kid-friendly weekend activities and school holiday programs across Queensland. Filter by age, travel time and interests. No login needed.">
+<meta name="theme-color" content="#0E7C6B">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="topbar" id="topbar">
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">🫘</span>
+      <div>
+        <h1>Bean There QLD</h1>
+        <p class="tagline">Weekends &amp; school holidays, sorted</p>
+      </div>
+    </div>
+    <button id="settings-btn" class="icon-btn" aria-label="Open settings">⚙️</button>
+  </header>
+  <div class="holiday-banner" id="holiday-banner" hidden>
+    <span id="holiday-banner-text" role="status"></span>
+    <button id="holidays-chip" class="chip chip-small" aria-pressed="false">Next school holidays</button>
+  </div>
+  <nav class="tabs" aria-label="Sections">
+    <button class="tab is-active" data-tab="find" aria-current="page">Find</button>
+    <button class="tab" data-tab="saved">Saved <span class="tab-count" id="saved-count" hidden></span></button>
+    <button class="tab" data-tab="plan">Plan</button>
+  </nav>
+</div>
+
+<main class="wrap">
+  <section id="view-find" aria-label="Find activities">
+    <div class="filter-bar" id="filter-bar">
+      <label class="search">
+        <span class="visually-hidden">Search activities</span>
+        <input id="search-input" type="search" placeholder="Search name, suburb…" autocomplete="off" aria-label="Search activities">
+      </label>
+      <div class="seg" role="group" aria-label="Age suitability" id="age-seg">
+        <button type="button" data-age-mode="both" aria-pressed="true">Suits both kids</button>
+        <button type="button" data-age-mode="younger" aria-pressed="false"></button>
+        <button type="button" data-age-mode="older" aria-pressed="false"></button>
+      </div>
+      <div class="filter-row">
+        <input id="postcode-input" inputmode="numeric" maxlength="4" placeholder="Postcode" aria-label="Your postcode" title="Enter your 4-digit Queensland postcode for drive-time estimates">
+        <select id="travel-select" aria-label="Travel time">
+          <option value="any" selected>Any distance</option>
+          <option value="15">Under 15 min</option>
+          <option value="30">Under 30 min</option>
+          <option value="60">Under 1 hour</option>
+          <option value="120">Under 2 hours</option>
+        </select>
+        <select id="sort-select" aria-label="Sort results">
+          <option value="suggested" selected>Suggested</option>
+          <option value="nearest">Nearest first</option>
+          <option value="cheapest">Cheapest first</option>
+          <option value="az">A–Z</option>
+        </select>
+      </div>
+      <div class="postcode-note" id="postcode-note" role="status" hidden></div>
+      <div class="chips" id="category-chips" aria-label="Categories"></div>
+    </div>
+    <p class="results-count" id="results-count" role="status" aria-live="polite"></p>
+    <section id="recommended" aria-label="Recommended activities" hidden>
+      <h2 id="recommended-title">Recommended</h2>
+      <div class="reco-row" id="recommended-row"></div>
+    </section>
+    <div id="results" class="cards"></div>
+  </section>
+
+  <section id="view-saved" hidden aria-label="Saved activities">
+    <h2>Saved</h2>
+    <p class="muted" id="saved-empty">No favourites yet — tap the heart on any activity to save it here.</p>
+    <div id="saved-list" class="cards"></div>
+  </section>
+
+  <section id="view-plan" hidden aria-label="Holiday planner">
+    <h2>Holiday planner</h2>
+    <div id="plan-import" class="notice" hidden></div>
+    <div id="plan-noholidays" class="notice" hidden></div>
+    <div class="plan-controls">
+      <label class="plan-block-label">School holidays
+        <select id="plan-block-select" aria-label="Choose a school holiday block"></select>
+      </label>
+      <div class="plan-share">
+        <button type="button" id="copy-link-btn" class="btn">Copy share link</button>
+        <button type="button" id="copy-text-btn" class="btn btn-secondary">Copy as text</button>
+      </div>
+      <p class="muted small">Share the link or the text with family — opening the link loads this plan.</p>
+    </div>
+    <div id="plan-days"></div>
+  </section>
+</main>
+
+<dialog id="settings-dialog" aria-labelledby="settings-title">
+  <form id="settings-form" novalidate>
+    <h2 id="settings-title">Settings</h2>
+    <fieldset>
+      <legend>First child</legend>
+      <div class="form-row">
+        <label>Name <input type="text" id="c1-name" maxlength="24" autocomplete="off"></label>
+        <label class="age-label">Age <input type="number" id="c1-age" min="0" max="16" inputmode="numeric"></label>
+      </div>
+      <div class="interests" id="c1-interests" aria-label="First child interests"></div>
+    </fieldset>
+    <fieldset>
+      <legend>Second child</legend>
+      <div class="form-row">
+        <label>Name <input type="text" id="c2-name" maxlength="24" autocomplete="off"></label>
+        <label class="age-label">Age <input type="number" id="c2-age" min="0" max="16" inputmode="numeric"></label>
+      </div>
+      <div class="interests" id="c2-interests" aria-label="Second child interests"></div>
+    </fieldset>
+    <fieldset>
+      <legend>Home postcode</legend>
+      <label>Postcode <input type="text" id="settings-postcode" inputmode="numeric" maxlength="4" placeholder="e.g. 4000" autocomplete="off"></label>
+      <p class="muted small">Queensland postcodes run 4000–4999. Used only on this device for drive-time estimates.</p>
+    </fieldset>
+    <p class="form-error" id="settings-error" role="alert" hidden></p>
+    <p class="form-warn" id="settings-warn" role="status" hidden></p>
+    <div class="form-actions">
+      <button type="button" class="btn btn-secondary" id="settings-reset">Reset to defaults</button>
+      <span class="form-actions-right">
+        <button type="button" class="btn btn-secondary" id="settings-close">Close</button>
+        <button type="submit" class="btn" id="settings-save">Save</button>
+      </span>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="plandate-dialog" aria-labelledby="plandate-title">
+  <form id="plandate-form" novalidate>
+    <h2 id="plandate-title">Add to plan</h2>
+    <p id="plandate-activity" class="muted"></p>
+    <label class="date-label">Date <input type="date" id="plandate-input" required></label>
+    <p class="form-error" id="plandate-error" role="alert" hidden></p>
+    <div class="form-actions">
+      <span></span>
+      <span class="form-actions-right">
+        <button type="button" class="btn btn-secondary" id="plandate-cancel">Cancel</button>
+        <button type="submit" class="btn" id="plandate-save">Add to plan</button>
+      </span>
+    </div>
+  </form>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
