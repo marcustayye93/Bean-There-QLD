@@ -11,6 +11,9 @@ Unlike the beanie-day twin, the local repo is fresh (no local base to diff
 against), so the script reconciles against the remote tree directly: every
 path in the local tree must either be new on remote or have a blob SHA
 identical to the local one, otherwise it refuses to avoid clobbering.
+For follow-up pushes it diffs local HEAD against HEAD~1 (the previously
+pushed state) and applies only those changes onto the remote tree,
+refusing on workflow paths or on paths changed remotely since the base.
 """
 import base64, json, subprocess, sys, urllib.request, urllib.error
 
@@ -51,12 +54,6 @@ def ls_tree_local(rev):
 
 local_head = sh("git", "rev-parse", "HEAD")
 head_files = ls_tree_local(local_head)
-print("local HEAD:", local_head, "| files:", len(head_files))
-
-banned = [p for p in head_files if p.startswith(".github/workflows/")]
-if banned:
-    print("REFUSING: push would touch workflow files (no Workflows scope):", banned)
-    sys.exit(1)
 
 ref = api("GET", "/git/refs/heads/main")
 remote_files = {}
@@ -74,20 +71,55 @@ if ref:
 else:
     print("remote main does not exist yet — initial push")
 
-# Reconcile: no local path may clobber a differing remote blob.
-for p, blob in head_files.items():
-    r = remote_files.get(p)
-    if r is not None and r != blob:
-        print(f"REFUSING: {p} differs on remote — manual merge needed")
+if remote_sha is None:
+    # ---- initial push: every local path must be new or identical on remote ----
+    for p, blob in head_files.items():
+        r = remote_files.get(p)
+        if r is not None and r != blob:
+            print(f"REFUSING: {p} differs on remote — manual merge needed")
+            sys.exit(1)
+    changed = sorted(head_files)
+    base_files = {}
+else:
+    # ---- follow-up push: diff local HEAD against HEAD~1 (the pushed base) ----
+    try:
+        local_base = sh("git", "rev-parse", "HEAD~1")
+    except subprocess.CalledProcessError:
+        print("REFUSING: remote exists but local repo has a single commit — "
+              "cannot determine the pushed base; push manually")
         sys.exit(1)
+    print("local base:", local_base)
+    base_files = ls_tree_local(local_base)
+    changed = sorted(p for p in set(base_files) | set(head_files)
+                     if base_files.get(p) != head_files.get(p))
+
+print("local HEAD:", local_head, "| files:", len(head_files),
+      "| changed:", len(changed))
+
+banned = [p for p in changed if p.startswith(".github/workflows/")]
+if banned:
+    print("REFUSING: push would touch workflow files (no Workflows scope):", banned)
+    sys.exit(1)
+
+if remote_sha is not None:
+    # Reconcile: every changed path must be untouched on remote since our base.
+    for p in changed:
+        if remote_files.get(p) != base_files.get(p):
+            print(f"REFUSING: {p} changed on remote since local base — manual merge needed")
+            sys.exit(1)
 
 entries = []
-for p in sorted(head_files):
-    content = subprocess.run(["git", "show", f"{local_head}:{p}"],
-                             capture_output=True, check=True, cwd=WORK).stdout
-    blob = api("POST", "/git/blobs", {"content": base64.b64encode(content).decode(),
-                                      "encoding": "base64"})
-    entries.append({"path": p, "mode": "100644", "type": "blob", "sha": blob["sha"]})
+for p in changed:
+    if p in head_files:
+        content = subprocess.run(["git", "show", f"{local_head}:{p}"],
+                                 capture_output=True, check=True, cwd=WORK).stdout
+        blob = api("POST", "/git/blobs", {"content": base64.b64encode(content).decode(),
+                                          "encoding": "base64"})
+        entries.append({"path": p, "mode": "100644", "type": "blob", "sha": blob["sha"]})
+        print("blob:", p)
+    else:
+        entries.append({"path": p, "mode": "100644", "type": "blob", "sha": None})
+        print("delete:", p)
 print("blobs uploaded:", len(entries))
 
 payload = {"tree": entries}
