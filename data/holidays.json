@@ -1,0 +1,163 @@
+{
+  "source_url": "http://education.qld.gov.au/about/Documents/qld-school-holidays.ics",
+  "generated": "2026-09-10",
+  "note": "School-holiday windows parsed live from the Qld Department of Education ICS feed (VEVENTs; the feed's DTEND is exclusive, so end dates are DTEND minus one day). Term dates are from DoE-published term dates (confirmed across QLD state school sites); terms are not present in the ICS feed. 2027 holiday windows are from the DoE 2027 school planner — the ICS feed currently extends only to Jan 2027. Holiday windows mark school weekdays; the flanking weekends are school-free too. Re-fetch annually; the ICS feed extends ~12 months forward.",
+  "periods": [
+    {
+      "name": "New Years Day",
+      "type": "public_holiday",
+      "start": "2026-01-01",
+      "end": "2026-01-01"
+    },
+    {
+      "name": "Australia Day Public Holiday",
+      "type": "public_holiday",
+      "start": "2026-01-26",
+      "end": "2026-01-26"
+    },
+    {
+      "name": "Term 1 2026",
+      "type": "term",
+      "start": "2026-01-27",
+      "end": "2026-04-02"
+    },
+    {
+      "name": "Autumn school holidays 2026",
+      "type": "holiday",
+      "start": "2026-04-03",
+      "end": "2026-04-17"
+    },
+    {
+      "name": "Good Friday Public Holiday",
+      "type": "public_holiday",
+      "start": "2026-04-03",
+      "end": "2026-04-03"
+    },
+    {
+      "name": "The day after Good Friday Public Holiday",
+      "type": "public_holiday",
+      "start": "2026-04-04",
+      "end": "2026-04-04"
+    },
+    {
+      "name": "Easter Sunday Public Holiday",
+      "type": "public_holiday",
+      "start": "2026-04-05",
+      "end": "2026-04-05"
+    },
+    {
+      "name": "Easter Monday Public Holiday",
+      "type": "public_holiday",
+      "start": "2026-04-06",
+      "end": "2026-04-06"
+    },
+    {
+      "name": "Term 2 2026",
+      "type": "term",
+      "start": "2026-04-20",
+      "end": "2026-06-26"
+    },
+    {
+      "name": "Anzac Day Public Holiday",
+      "type": "public_holiday",
+      "start": "2026-04-25",
+      "end": "2026-04-25"
+    },
+    {
+      "name": "Labour Day Public Holiday",
+      "type": "public_holiday",
+      "start": "2026-05-04",
+      "end": "2026-05-04"
+    },
+    {
+      "name": "Winter school holidays 2026",
+      "type": "holiday",
+      "start": "2026-06-29",
+      "end": "2026-07-10"
+    },
+    {
+      "name": "Term 3 2026",
+      "type": "term",
+      "start": "2026-07-13",
+      "end": "2026-09-18"
+    },
+    {
+      "name": "Spring school holidays 2026",
+      "type": "holiday",
+      "start": "2026-09-21",
+      "end": "2026-10-02"
+    },
+    {
+      "name": "King’s Birthday Public Holiday",
+      "type": "public_holiday",
+      "start": "2026-10-05",
+      "end": "2026-10-05"
+    },
+    {
+      "name": "Term 4 2026",
+      "type": "term",
+      "start": "2026-10-06",
+      "end": "2026-12-11"
+    },
+    {
+      "name": "Summer school holidays 2026-27",
+      "type": "holiday",
+      "start": "2026-12-14",
+      "end": "2027-01-25"
+    },
+    {
+      "name": "Christmas Day Public Holiday",
+      "type": "public_holiday",
+      "start": "2026-12-25",
+      "end": "2026-12-25"
+    },
+    {
+      "name": "Boxing Day Public Holiday",
+      "type": "public_holiday",
+      "start": "2026-12-26",
+      "end": "2026-12-26"
+    },
+    {
+      "name": "Boxing Day Public Holiday",
+      "type": "public_holiday",
+      "start": "2026-12-28",
+      "end": "2026-12-28"
+    },
+    {
+      "name": "New Year's Day Public Holiday",
+      "type": "public_holiday",
+      "start": "2027-01-01",
+      "end": "2027-01-01"
+    },
+    {
+      "name": "Australia Day Public Holiday",
+      "type": "public_holiday",
+      "start": "2027-01-26",
+      "end": "2027-01-26"
+    },
+    {
+      "name": "Autumn school holidays 2027",
+      "type": "holiday",
+      "start": "2027-03-26",
+      "end": "2027-04-11"
+    },
+    {
+      "name": "Winter school holidays 2027",
+      "type": "holiday",
+      "start": "2027-06-26",
+      "end": "2027-07-11"
+    },
+    {
+      "name": "Spring school holidays 2027",
+      "type": "holiday",
+      "start": "2027-09-18",
+      "end": "2027-10-04"
+    },
+    {
+      "name": "Summer school holidays 2027-28",
+      "type": "holiday",
+      "start": "2027-12-11",
+      "end": "2028-01-23"
+    }
+  ]
+}

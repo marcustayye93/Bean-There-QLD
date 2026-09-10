@@ -1,0 +1,4 @@
+{
+  "note": "Postcode lookup unavailable — no verifiable public AU postcode dataset found (checked data.gov.au and data.qld.gov.au 2026-09-10). The app should degrade with an honest re-enter notice.",
+  "postcodes": {}
+}

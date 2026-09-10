@@ -1,0 +1,2442 @@
+{
+  "meta": {
+    "generated": "2026-09-10",
+    "live_count": 72,
+    "sample_count": 12,
+    "sources": [
+      {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations",
+        "license": "CC-BY-4.0",
+        "used": "live"
+      },
+      {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools",
+        "license": "CC-BY-4.0",
+        "used": "live"
+      },
+      {
+        "label": "Scouts Queensland",
+        "url": "https://scoutsqld.com.au/",
+        "license": "n/a (program info)",
+        "used": "sample"
+      },
+      {
+        "label": "Play Football (Football Australia) — MiniRoos",
+        "url": "https://playfootball.com.au/miniroos/players",
+        "license": "n/a (program info)",
+        "used": "sample"
+      },
+      {
+        "label": "Basketball Queensland",
+        "url": "https://www.queensland.basketball/play/get-started",
+        "license": "n/a (program info)",
+        "used": "sample"
+      },
+      {
+        "label": "PCYC Queensland — School Holiday Programs",
+        "url": "https://www.pcyc.org.au/get-active/school-holiday-programs/",
+        "license": "n/a (program info)",
+        "used": "sample"
+      },
+      {
+        "label": "YMCA Queensland — Community Centres",
+        "url": "https://ymcaqueensland.org.au/services/community-centres?mc_cid=3386862d1c&mc_eid=UNIQID",
+        "license": "n/a (program info)",
+        "used": "sample"
+      },
+      {
+        "label": "Brisbane City Council — library events",
+        "url": "https://www.brisbane.qld.gov.au/events",
+        "license": "n/a (program info)",
+        "used": "sample"
+      },
+      {
+        "label": "ATDW ATLAS API (queensland.com / TEQ)",
+        "url": "https://developer.atdw.com.au",
+        "license": "keyed distributor API",
+        "used": "skipped"
+      }
+    ]
+  },
+  "activities": [
+    {
+      "id": "park-mt-coot-tha-reserve-bardon-section",
+      "name": "Mt Coot-tha Reserve (Bardon Section)",
+      "description": "Park in Bardon listed by Brisbane City Council.",
+      "suburb": "Bardon",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.454647,
+      "lng": 152.972446,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-sir-john-chandler-park",
+      "name": "Sir John Chandler Park",
+      "description": "Park in Indooroopilly listed by Brisbane City Council.",
+      "suburb": "Indooroopilly",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.515772,
+      "lng": 152.991868,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-victoria-park",
+      "name": "Victoria Park",
+      "description": "Park in Herston listed by Brisbane City Council.",
+      "suburb": "Herston",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.452458,
+      "lng": 153.022106,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-brisbane-botanic-gardens-mt-coot-tha",
+      "name": "Brisbane Botanic Gardens Mt Coot-tha",
+      "description": "Park in Mount Coot-tha listed by Brisbane City Council.",
+      "suburb": "Mount Coot-tha",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.477674,
+      "lng": 152.975176,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-banks-street-reserve",
+      "name": "Banks Street Reserve",
+      "description": "Park in Alderley listed by Brisbane City Council.",
+      "suburb": "Alderley",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.433834,
+      "lng": 152.99743,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-sparkes-hill-reserve",
+      "name": "Sparkes Hill Reserve",
+      "description": "Park in Stafford listed by Brisbane City Council.",
+      "suburb": "Stafford",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.411388,
+      "lng": 152.998524,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-yeronga-memorial-park",
+      "name": "Yeronga Memorial Park",
+      "description": "Park in Yeronga listed by Brisbane City Council.",
+      "suburb": "Yeronga",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.519665,
+      "lng": 153.024578,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-weller-road-park",
+      "name": "Weller Road Park",
+      "description": "Park in Tarragindi listed by Brisbane City Council.",
+      "suburb": "Tarragindi",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.525614,
+      "lng": 153.050141,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-grange-forest-park",
+      "name": "Grange Forest Park",
+      "description": "Park in Grange listed by Brisbane City Council.",
+      "suburb": "Grange",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.416491,
+      "lng": 153.010578,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-city-botanic-gardens",
+      "name": "City Botanic Gardens",
+      "description": "Park in Brisbane City listed by Brisbane City Council.",
+      "suburb": "Brisbane City",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.475016,
+      "lng": 153.029595,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-boondall-wetlands",
+      "name": "Boondall Wetlands",
+      "description": "Park in Nudgee Beach listed by Brisbane City Council.",
+      "suburb": "Nudgee Beach",
+      "region": "Brisbane",
+      "zone": "North Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.352458,
+      "lng": 153.093739,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-kedron-brook-floodway-park",
+      "name": "Kedron Brook Floodway Park",
+      "description": "Park in Brisbane Airport listed by Brisbane City Council.",
+      "suburb": "Brisbane Airport",
+      "region": "Brisbane",
+      "zone": "North Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.361607,
+      "lng": 153.104156,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-tinchi-tamba-wetlands-reserve",
+      "name": "Tinchi Tamba Wetlands Reserve",
+      "description": "Park in Bald Hills listed by Brisbane City Council.",
+      "suburb": "Bald Hills",
+      "region": "Brisbane",
+      "zone": "North Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.290643,
+      "lng": 153.039714,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-bill-brown-sports-reserve",
+      "name": "Bill Brown Sports Reserve",
+      "description": "Park in Fitzgibbon listed by Brisbane City Council.",
+      "suburb": "Fitzgibbon",
+      "region": "Brisbane",
+      "zone": "North Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.335524,
+      "lng": 153.036516,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-chermside-hills-reserve",
+      "name": "Chermside Hills Reserve",
+      "description": "Park in McDowall listed by Brisbane City Council.",
+      "suburb": "McDowall",
+      "region": "Brisbane",
+      "zone": "North Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.376996,
+      "lng": 152.99756,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-boondall-wetlands-western-extension",
+      "name": "Boondall Wetlands Western Extension",
+      "description": "Park in Boondall listed by Brisbane City Council.",
+      "suburb": "Boondall",
+      "region": "Brisbane",
+      "zone": "North Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.350801,
+      "lng": 153.074691,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-7th-brigade-park",
+      "name": "7Th Brigade Park",
+      "description": "Park in Chermside listed by Brisbane City Council.",
+      "suburb": "Chermside",
+      "region": "Brisbane",
+      "zone": "North Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.380544,
+      "lng": 153.040639,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-tuckeroo-park",
+      "name": "Tuckeroo Park",
+      "description": "Park in Nudgee Beach listed by Brisbane City Council.",
+      "suburb": "Nudgee Beach",
+      "region": "Brisbane",
+      "zone": "North Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.369073,
+      "lng": 153.10356,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-deagon-wetlands",
+      "name": "Deagon Wetlands",
+      "description": "Park in Sandgate listed by Brisbane City Council.",
+      "suburb": "Sandgate",
+      "region": "Brisbane",
+      "zone": "North Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.315374,
+      "lng": 153.051261,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-fitzgibbon-bushlands",
+      "name": "Fitzgibbon Bushlands",
+      "description": "Park in Fitzgibbon listed by Brisbane City Council.",
+      "suburb": "Fitzgibbon",
+      "region": "Brisbane",
+      "zone": "North Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.336578,
+      "lng": 153.029427,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-karawatha-forest-park",
+      "name": "Karawatha Forest Park",
+      "description": "Park in Karawatha listed by Brisbane City Council.",
+      "suburb": "Karawatha",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.632092,
+      "lng": 153.080402,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-toohey-forest-park",
+      "name": "Toohey Forest Park",
+      "description": "Park in Nathan listed by Brisbane City Council.",
+      "suburb": "Nathan",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.542691,
+      "lng": 153.053749,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-parkinson-bushlands",
+      "name": "Parkinson Bushlands",
+      "description": "Park in Parkinson listed by Brisbane City Council.",
+      "suburb": "Parkinson",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.650873,
+      "lng": 153.029543,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-sergeant-dan-stiller-memorial-reserve",
+      "name": "Sergeant Dan Stiller Memorial Reserve",
+      "description": "Park in Heathwood listed by Brisbane City Council.",
+      "suburb": "Heathwood",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.647469,
+      "lng": 152.993028,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-karawatha-forest-south",
+      "name": "Karawatha Forest South",
+      "description": "Park in Drewvale listed by Brisbane City Council.",
+      "suburb": "Drewvale",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.643748,
+      "lng": 153.052129,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-glider-forest",
+      "name": "Glider Forest",
+      "description": "Park in Larapinta listed by Brisbane City Council.",
+      "suburb": "Larapinta",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.651111,
+      "lng": 153.011091,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-archerfield-wetlands-parkland",
+      "name": "Archerfield Wetlands Parkland",
+      "description": "Park in Rocklea listed by Brisbane City Council.",
+      "suburb": "Rocklea",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.576182,
+      "lng": 152.99203,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-paradise-road-park",
+      "name": "Paradise Road Park",
+      "description": "Park in Pallara listed by Brisbane City Council.",
+      "suburb": "Pallara",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.601547,
+      "lng": 153.022466,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-mt-gravatt-outlook-reserve",
+      "name": "Mt Gravatt Outlook Reserve",
+      "description": "Park in Mount Gravatt listed by Brisbane City Council.",
+      "suburb": "Mount Gravatt",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.543067,
+      "lng": 153.077692,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-warril-parkland",
+      "name": "Warril Parkland",
+      "description": "Park in Larapinta listed by Brisbane City Council.",
+      "suburb": "Larapinta",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.648967,
+      "lng": 153.002828,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-leacroft-road-park",
+      "name": "Leacroft Road Park",
+      "description": "Park in Burbank listed by Brisbane City Council.",
+      "suburb": "Burbank",
+      "region": "Brisbane",
+      "zone": "East Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.570219,
+      "lng": 153.170947,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-prout-road-park",
+      "name": "Prout Road Park",
+      "description": "Park in Burbank listed by Brisbane City Council.",
+      "suburb": "Burbank",
+      "region": "Brisbane",
+      "zone": "East Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.536133,
+      "lng": 153.148508,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-whites-hill-reserve",
+      "name": "Whites Hill Reserve",
+      "description": "Park in Camp Hill listed by Brisbane City Council.",
+      "suburb": "Camp Hill",
+      "region": "Brisbane",
+      "zone": "East Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.51041,
+      "lng": 153.083872,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-alperton-road-park",
+      "name": "Alperton Road Park",
+      "description": "Park in Burbank listed by Brisbane City Council.",
+      "suburb": "Burbank",
+      "region": "Brisbane",
+      "zone": "East Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.571659,
+      "lng": 153.15289,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-longton-court-park-no-100",
+      "name": "Longton Court Park (No. 100)",
+      "description": "Park in Burbank listed by Brisbane City Council.",
+      "suburb": "Burbank",
+      "region": "Brisbane",
+      "zone": "East Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.586981,
+      "lng": 153.168704,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-tingalpa-creek-reserve",
+      "name": "Tingalpa Creek Reserve",
+      "description": "Park in Chandler listed by Brisbane City Council.",
+      "suburb": "Chandler",
+      "region": "Brisbane",
+      "zone": "East Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.506645,
+      "lng": 153.185579,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-belmont-hills-bushland",
+      "name": "Belmont Hills Bushland",
+      "description": "Park in Carindale listed by Brisbane City Council.",
+      "suburb": "Carindale",
+      "region": "Brisbane",
+      "zone": "East Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.509505,
+      "lng": 153.120374,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-green-camp-road-park",
+      "name": "Green Camp Road Park",
+      "description": "Park in Ransome listed by Brisbane City Council.",
+      "suburb": "Ransome",
+      "region": "Brisbane",
+      "zone": "East Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.480133,
+      "lng": 153.172358,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-porter-s-paddock-park",
+      "name": "Porter's Paddock Park",
+      "description": "Park in Tingalpa listed by Brisbane City Council.",
+      "suburb": "Tingalpa",
+      "region": "Brisbane",
+      "zone": "East Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.479758,
+      "lng": 153.112548,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-j-c-trotter-memorial-park",
+      "name": "J.C.Trotter Memorial Park",
+      "description": "Park in Burbank listed by Brisbane City Council.",
+      "suburb": "Burbank",
+      "region": "Brisbane",
+      "zone": "East Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.552597,
+      "lng": 153.173029,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-mt-coot-tha-reserve",
+      "name": "Mt Coot-tha Reserve",
+      "description": "Park in Mount Coot-tha listed by Brisbane City Council.",
+      "suburb": "Mount Coot-tha",
+      "region": "Brisbane",
+      "zone": "West Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.475995,
+      "lng": 152.93251,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-changing-mountain-bushland",
+      "name": "Changing Mountain Bushland",
+      "description": "Park in Kholo listed by Brisbane City Council.",
+      "suburb": "Kholo",
+      "region": "Brisbane",
+      "zone": "West Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.513313,
+      "lng": 152.787288,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-kholo-bushland-reserve",
+      "name": "Kholo Bushland Reserve",
+      "description": "Park in Kholo listed by Brisbane City Council.",
+      "suburb": "Kholo",
+      "region": "Brisbane",
+      "zone": "West Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.491227,
+      "lng": 152.817063,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-keperra-bushland",
+      "name": "Keperra Bushland",
+      "description": "Park in Keperra listed by Brisbane City Council.",
+      "suburb": "Keperra",
+      "region": "Brisbane",
+      "zone": "West Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.424462,
+      "lng": 152.939921,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-gold-creek-reserve",
+      "name": "Gold Creek Reserve",
+      "description": "Park in Brookfield listed by Brisbane City Council.",
+      "suburb": "Brookfield",
+      "region": "Brisbane",
+      "zone": "West Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.463487,
+      "lng": 152.913641,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-marstaeller-road-reserve",
+      "name": "Marstaeller Road Reserve",
+      "description": "Park in Mount Crosby listed by Brisbane City Council.",
+      "suburb": "Mount Crosby",
+      "region": "Brisbane",
+      "zone": "West Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.550686,
+      "lng": 152.79589,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-anstead-bushland-reserve",
+      "name": "Anstead Bushland Reserve",
+      "description": "Park in Anstead listed by Brisbane City Council.",
+      "suburb": "Anstead",
+      "region": "Brisbane",
+      "zone": "West Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.545276,
+      "lng": 152.856257,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-pooh-corner",
+      "name": "Pooh Corner",
+      "description": "Park in Wacol listed by Brisbane City Council.",
+      "suburb": "Wacol",
+      "region": "Brisbane",
+      "zone": "West Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.576683,
+      "lng": 152.928152,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-priors-pocket-road-park-no-545",
+      "name": "Priors Pocket Road Park (No. 545)",
+      "description": "Park in Moggill listed by Brisbane City Council.",
+      "suburb": "Moggill",
+      "region": "Brisbane",
+      "zone": "West Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.597765,
+      "lng": 152.901138,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "park-mt-nebo-reserve",
+      "name": "Mt Nebo Reserve",
+      "description": "Park in Upper Kedron listed by Brisbane City Council.",
+      "suburb": "Upper Kedron",
+      "region": "Brisbane",
+      "zone": "West Brisbane",
+      "age_min": 0,
+      "age_max": 12,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.429757,
+      "lng": 152.922704,
+      "source": {
+        "label": "Brisbane City Council — Park Locations",
+        "url": "https://www.data.qld.gov.au/dataset/park-locations"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-acacia-ridge-leisure-centre",
+      "name": "Acacia Ridge Leisure Centre",
+      "description": "Public swimming pool in Acacia Ridge listed by Brisbane City Council.",
+      "suburb": "Acacia Ridge",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.586159,
+      "lng": 153.026354,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-bellbowrie-pool",
+      "name": "Bellbowrie Pool",
+      "description": "Public swimming pool in Bellbowrie listed by Brisbane City Council.",
+      "suburb": "Bellbowrie",
+      "region": "Brisbane",
+      "zone": "West Brisbane",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.56382,
+      "lng": 152.889833,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-carole-park-pool",
+      "name": "Carole Park Pool",
+      "description": "Public swimming pool in Wacol listed by Brisbane City Council.",
+      "suburb": "Wacol",
+      "region": "Brisbane",
+      "zone": "West Brisbane",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.607464,
+      "lng": 152.932267,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-centenary-pool",
+      "name": "Centenary Pool",
+      "description": "Public swimming pool in Spring Hill listed by Brisbane City Council.",
+      "suburb": "Spring Hill",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.4549,
+      "lng": 153.0261,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-chermside-aquatic-centre",
+      "name": "Chermside Aquatic Centre",
+      "description": "Public swimming pool in Chermside listed by Brisbane City Council.",
+      "suburb": "Chermside",
+      "region": "Brisbane",
+      "zone": "North Brisbane",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.385804,
+      "lng": 153.036226,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-colmslie-aquatic-centre",
+      "name": "Colmslie Aquatic Centre",
+      "description": "Public swimming pool in Morningside listed by Brisbane City Council.",
+      "suburb": "Morningside",
+      "region": "Brisbane",
+      "zone": "East Brisbane",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.453413,
+      "lng": 153.083054,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-dunlop-park-memorial-swimming-pool",
+      "name": "Dunlop Park Memorial Swimming Pool",
+      "description": "Public swimming pool in Corinda listed by Brisbane City Council.",
+      "suburb": "Corinda",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.547035,
+      "lng": 152.980863,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-emily-seebohm-aquatic-centre",
+      "name": "Emily Seebohm Aquatic Centre",
+      "description": "Public swimming pool in Fitzgibbon listed by Brisbane City Council.",
+      "suburb": "Fitzgibbon",
+      "region": "Brisbane",
+      "zone": "North Brisbane",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.331986,
+      "lng": 153.042374,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-hibiscus-sports-complex-pool",
+      "name": "Hibiscus Sports Complex  Pool",
+      "description": "Public swimming pool in Upper Mount Gravatt listed by Brisbane City Council.",
+      "suburb": "Upper Mount Gravatt",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.55299,
+      "lng": 153.073094,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-ithaca-pool",
+      "name": "Ithaca Pool",
+      "description": "Public swimming pool in Paddington listed by Brisbane City Council.",
+      "suburb": "Paddington",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.462686,
+      "lng": 153.010401,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-jindalee-pool",
+      "name": "Jindalee Pool",
+      "description": "Public swimming pool in Jindalee listed by Brisbane City Council.",
+      "suburb": "Jindalee",
+      "region": "Brisbane",
+      "zone": "West Brisbane",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.532559,
+      "lng": 152.942756,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-langlands-park-memorial-pool",
+      "name": "Langlands Park Memorial Pool",
+      "description": "Public swimming pool in Stones Corner listed by Brisbane City Council.",
+      "suburb": "Stones Corner",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.497823,
+      "lng": 153.049223,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-manly-pool",
+      "name": "Manly Pool",
+      "description": "Public swimming pool in Manly listed by Brisbane City Council.",
+      "suburb": "Manly",
+      "region": "Brisbane",
+      "zone": "East Brisbane",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.453489,
+      "lng": 153.18749,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-mt-gravatt-east-pool",
+      "name": "Mt Gravatt East Pool",
+      "description": "Public swimming pool in Mansfield listed by Brisbane City Council.",
+      "suburb": "Mansfield",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.533415,
+      "lng": 153.094685,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-musgrave-park-swimming-centre",
+      "name": "Musgrave Park Swimming Centre",
+      "description": "Public swimming pool in South Brisbane listed by Brisbane City Council.",
+      "suburb": "South Brisbane",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.480041,
+      "lng": 153.016788,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-newmarket-pool",
+      "name": "Newmarket Pool",
+      "description": "Public swimming pool in Newmarket listed by Brisbane City Council.",
+      "suburb": "Newmarket",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.429758,
+      "lng": 153.006825,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-parkinson-aquatic-centre",
+      "name": "Parkinson Aquatic Centre",
+      "description": "Public swimming pool in Parkinson listed by Brisbane City Council.",
+      "suburb": "Parkinson",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.640009,
+      "lng": 153.038684,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-runcorn-pool",
+      "name": "Runcorn Pool",
+      "description": "Public swimming pool in Runcorn listed by Brisbane City Council.",
+      "suburb": "Runcorn",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.591547,
+      "lng": 153.075667,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-sandgate-aquatic-centre",
+      "name": "Sandgate Aquatic Centre",
+      "description": "Public swimming pool in Sandgate listed by Brisbane City Council.",
+      "suburb": "Sandgate",
+      "region": "Brisbane",
+      "zone": "North Brisbane",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.312153,
+      "lng": 153.069073,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-spring-hill-baths",
+      "name": "Spring Hill Baths",
+      "description": "Public swimming pool in Springhill listed by Brisbane City Council.",
+      "suburb": "Springhill",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.459917,
+      "lng": 153.02127,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-valley-pool",
+      "name": "Valley Pool",
+      "description": "Public swimming pool in Fortitude Valley listed by Brisbane City Council.",
+      "suburb": "Fortitude Valley",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.454005,
+      "lng": 153.036483,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "pool-yeronga-park-memorial-swimming-pool",
+      "name": "Yeronga Park Memorial Swimming Pool",
+      "description": "Public swimming pool in Yeronga listed by Brisbane City Council.",
+      "suburb": "Yeronga",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": 16,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Entry fees may apply — check council site",
+      "duration": "1-3 hours",
+      "booking_url": null,
+      "booking_required": false,
+      "lat": -27.520516,
+      "lng": 153.022386,
+      "source": {
+        "label": "Brisbane City Council — Swimming Pool locations",
+        "url": "https://www.data.qld.gov.au/dataset/swimming-pools"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "sample-scouts-joeys",
+      "name": "Scouts Queensland — Joey Scouts (ages 5–8)",
+      "description": "Weekly section for 5–8 year olds: games, craft, day hikes and outdoor adventure skills. Find your local of 200+ Queensland groups via Scouts Queensland.",
+      "suburb": "Various",
+      "region": "Queensland",
+      "zone": "Queensland",
+      "age_min": 5,
+      "age_max": 8,
+      "category": "scouts",
+      "indoor": "both",
+      "price_aud": null,
+      "price_note": "Membership fees apply — check with your local group",
+      "duration": "Weekly during school terms",
+      "booking_url": "https://scoutsqld.com.au/join-scouts/",
+      "booking_required": true,
+      "lat": null,
+      "lng": null,
+      "source": {
+        "label": "Hand-verified sample (see data/DATA_SOURCES.md)",
+        "url": "https://scoutsqld.com.au/join-scouts/cub-scouts-7-11-yrs/"
+      },
+      "live": false,
+      "holiday_only": false,
+      "interests": [
+        "scouts",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "sample-scouts-cubs",
+      "name": "Scouts Queensland — Cub Scouts (ages 8–11)",
+      "description": "Weekly section for 8–11 year olds: camping, canoeing, navigation and bushwalks. Find your local group via Scouts Queensland.",
+      "suburb": "Various",
+      "region": "Queensland",
+      "zone": "Queensland",
+      "age_min": 8,
+      "age_max": 11,
+      "category": "scouts",
+      "indoor": "both",
+      "price_aud": null,
+      "price_note": "Membership fees apply — check with your local group",
+      "duration": "Weekly during school terms",
+      "booking_url": "https://scoutsqld.com.au/join-scouts/",
+      "booking_required": true,
+      "lat": null,
+      "lng": null,
+      "source": {
+        "label": "Hand-verified sample (see data/DATA_SOURCES.md)",
+        "url": "https://scoutsqld.com.au/join-scouts/cub-scouts-7-11-yrs/"
+      },
+      "live": false,
+      "holiday_only": false,
+      "interests": [
+        "scouts",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "sample-scouts-scouts",
+      "name": "Scouts Queensland — Scouts (ages 11–14)",
+      "description": "Weekly section for 11–14 year olds: expeditions, camp cooking and leadership skills. Find your local group via Scouts Queensland.",
+      "suburb": "Various",
+      "region": "Queensland",
+      "zone": "Queensland",
+      "age_min": 11,
+      "age_max": 14,
+      "category": "scouts",
+      "indoor": "both",
+      "price_aud": null,
+      "price_note": "Membership fees apply — check with your local group",
+      "duration": "Weekly during school terms",
+      "booking_url": "https://scoutsqld.com.au/join-scouts/",
+      "booking_required": true,
+      "lat": null,
+      "lng": null,
+      "source": {
+        "label": "Hand-verified sample (see data/DATA_SOURCES.md)",
+        "url": "https://scoutsqld.com.au/join-scouts/cub-scouts-7-11-yrs/"
+      },
+      "live": false,
+      "holiday_only": false,
+      "interests": [
+        "scouts",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "sample-soccer-miniroos-kickoff",
+      "name": "MiniRoos Kick-Off (ages 4–11)",
+      "description": "National introductory soccer program for boys and girls aged 4–11: 45–60 minute weekly sessions over 4–12 weeks. Find a club via Play Football.",
+      "suburb": "Various",
+      "region": "Queensland",
+      "zone": "Queensland",
+      "age_min": 4,
+      "age_max": 11,
+      "category": "soccer",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Registration fees vary by club — check with provider",
+      "duration": "45–60 min weekly sessions",
+      "booking_url": "https://playfootball.com.au/miniroos/players",
+      "booking_required": true,
+      "lat": null,
+      "lng": null,
+      "source": {
+        "label": "Hand-verified sample (see data/DATA_SOURCES.md)",
+        "url": "https://playfootball.com.au/miniroos/players"
+      },
+      "live": false,
+      "holiday_only": false,
+      "interests": [
+        "soccer"
+      ]
+    },
+    {
+      "id": "sample-soccer-miniroos-club",
+      "name": "MiniRoos Club Football (ages 5–11)",
+      "description": "Team-based small-sided soccer (4v4, 7v7, 9v9) played in the winter season for ages 5–11. Find a club via Play Football.",
+      "suburb": "Various",
+      "region": "Queensland",
+      "zone": "Queensland",
+      "age_min": 5,
+      "age_max": 11,
+      "category": "soccer",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Registration fees vary by club — check with provider",
+      "duration": "Weekly in the winter season",
+      "booking_url": "https://playfootball.com.au/miniroos/players",
+      "booking_required": true,
+      "lat": null,
+      "lng": null,
+      "source": {
+        "label": "Hand-verified sample (see data/DATA_SOURCES.md)",
+        "url": "https://playfootball.com.au/miniroos/players"
+      },
+      "live": false,
+      "holiday_only": false,
+      "interests": [
+        "soccer"
+      ]
+    },
+    {
+      "id": "sample-soccer-miniroos-girls",
+      "name": "MiniRoos for Girls — MiniTillies (ages 4–11)",
+      "description": "Girls-only introductory soccer program for ages 4–11, run over 4–12 weeks. Find a program via Play Football.",
+      "suburb": "Various",
+      "region": "Queensland",
+      "zone": "Queensland",
+      "age_min": 4,
+      "age_max": 11,
+      "category": "soccer",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Registration fees vary by club — check with provider",
+      "duration": "45–60 min weekly sessions",
+      "booking_url": "https://playfootball.com.au/miniroos/players",
+      "booking_required": true,
+      "lat": null,
+      "lng": null,
+      "source": {
+        "label": "Hand-verified sample (see data/DATA_SOURCES.md)",
+        "url": "https://playfootball.com.au/miniroos/players"
+      },
+      "live": false,
+      "holiday_only": false,
+      "interests": [
+        "soccer"
+      ]
+    },
+    {
+      "id": "sample-basketball-junior",
+      "name": "Basketball Queensland — junior domestic competitions",
+      "description": "Junior domestic basketball run by 43 affiliated associations across Queensland. Age groups and seasons vary by association — use the Basketball Queensland finder to contact your nearest one.",
+      "suburb": "Various",
+      "region": "Queensland",
+      "zone": "Queensland",
+      "age_min": 5,
+      "age_max": 16,
+      "category": "basketball",
+      "indoor": "indoor",
+      "price_aud": null,
+      "price_note": "Registration fees vary by association — check with provider",
+      "duration": "Weekly in season",
+      "booking_url": "https://www.queensland.basketball/play/get-started",
+      "booking_required": true,
+      "lat": null,
+      "lng": null,
+      "source": {
+        "label": "Hand-verified sample (see data/DATA_SOURCES.md)",
+        "url": "https://www.queensland.basketball/play/get-started"
+      },
+      "live": false,
+      "holiday_only": false,
+      "interests": [
+        "basketball"
+      ]
+    },
+    {
+      "id": "sample-basketball-dev",
+      "name": "Basketball Queensland — kids development programs (ages 4–9)",
+      "description": "Introductory basketball for kids aged 4–9: fundamental skills, teamwork and confidence through structured activities and modified games. Find a program via Basketball Queensland.",
+      "suburb": "Various",
+      "region": "Queensland",
+      "zone": "Queensland",
+      "age_min": 4,
+      "age_max": 9,
+      "category": "basketball",
+      "indoor": "indoor",
+      "price_aud": null,
+      "price_note": "Program fees vary by association — check with provider",
+      "duration": "Varies by program",
+      "booking_url": "https://www.queensland.basketball/play/get-started",
+      "booking_required": true,
+      "lat": null,
+      "lng": null,
+      "source": {
+        "label": "Hand-verified sample (see data/DATA_SOURCES.md)",
+        "url": "https://www.queensland.basketball/play/get-started"
+      },
+      "live": false,
+      "holiday_only": false,
+      "interests": [
+        "basketball"
+      ]
+    },
+    {
+      "id": "sample-camp-pcyc",
+      "name": "PCYC Queensland school holiday programs",
+      "description": "Half-day and full-day school holiday activity camps at PCYC clubs statewide — gymnastics, team games, laser tag, court sports and more. Program varies by club.",
+      "suburb": "Various",
+      "region": "Queensland",
+      "zone": "Queensland",
+      "age_min": 5,
+      "age_max": 12,
+      "category": "camps",
+      "indoor": "both",
+      "price_aud": null,
+      "price_note": "Check with provider",
+      "duration": "Half-day and full-day camps",
+      "booking_url": "https://www.pcyc.org.au/get-active/school-holiday-programs/",
+      "booking_required": true,
+      "lat": null,
+      "lng": null,
+      "source": {
+        "label": "Hand-verified sample (see data/DATA_SOURCES.md)",
+        "url": "https://www.pcyc.org.au/get-active/school-holiday-programs/"
+      },
+      "live": false,
+      "holiday_only": true,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "sample-camp-ymca",
+      "name": "YMCA Queensland school holiday programs",
+      "description": "School holiday programs run at YMCA community centres across south-east Queensland (e.g. Springfield Lakes, North Lakes, Mango Hill). Check your nearest centre for the current program.",
+      "suburb": "Various",
+      "region": "Queensland",
+      "zone": "Queensland",
+      "age_min": 3,
+      "age_max": 12,
+      "category": "camps",
+      "indoor": "both",
+      "price_aud": null,
+      "price_note": "Check with provider",
+      "duration": "Varies by centre",
+      "booking_url": "https://ymcaqueensland.org.au/services/community-centres",
+      "booking_required": true,
+      "lat": null,
+      "lng": null,
+      "source": {
+        "label": "Hand-verified sample (see data/DATA_SOURCES.md)",
+        "url": "https://ymcaqueensland.org.au/services/community-centres?mc_cid=3386862d1c&mc_eid=UNIQID"
+      },
+      "live": false,
+      "holiday_only": true,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "sample-lego-bcc-brick-builders",
+      "name": "BCC Libraries — Brick builders code club (ages 8–12)",
+      "description": "Hands-on STEAM building sessions at Brisbane City Council libraries, usually in the school holidays. Some branches require bookings — check the council events page for current sessions.",
+      "suburb": "Various",
+      "region": "Queensland",
+      "zone": "Queensland",
+      "age_min": 8,
+      "age_max": 12,
+      "category": "lego",
+      "indoor": "indoor",
+      "price_aud": null,
+      "price_note": "Check with provider",
+      "duration": "1–2 hour sessions",
+      "booking_url": "https://www.brisbane.qld.gov.au/events",
+      "booking_required": true,
+      "lat": null,
+      "lng": null,
+      "source": {
+        "label": "Hand-verified sample (see data/DATA_SOURCES.md)",
+        "url": "https://www.brisbane.qld.gov.au/events"
+      },
+      "live": false,
+      "holiday_only": true,
+      "interests": [
+        "lego"
+      ]
+    },
+    {
+      "id": "sample-craft-bcc-make-create",
+      "name": "BCC Libraries — Make and create for kids (ages 4–12)",
+      "description": "Free drop-in art and craft sessions at Brisbane City Council libraries — no booking needed. Check the council events page for current sessions.",
+      "suburb": "Various",
+      "region": "Queensland",
+      "zone": "Queensland",
+      "age_min": 4,
+      "age_max": 12,
+      "category": "craft",
+      "indoor": "indoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": "Drop-in sessions",
+      "booking_url": "https://www.brisbane.qld.gov.au/events",
+      "booking_required": false,
+      "lat": null,
+      "lng": null,
+      "source": {
+        "label": "Hand-verified sample (see data/DATA_SOURCES.md)",
+        "url": "https://www.brisbane.qld.gov.au/events"
+      },
+      "live": false,
+      "holiday_only": false,
+      "interests": [
+        "craft"
+      ]
+    }
+  ]
+}
