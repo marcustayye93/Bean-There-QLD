@@ -4,23 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Queensland Adventure — family weekend &amp; school holiday finder</title>
-<meta name="description" content="Find kid-friendly weekend activities and school holiday programs across Queensland. Filter by travel time and interests. No login needed.">
-<meta name="theme-color" content="#0E7C6B">
+<meta name="description" content="Find family weekend activities and school holiday programs across Queensland. Filter by travel time and interests. No login needed.">
+<meta name="theme-color" content="#ffffff">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <div class="topbar" id="topbar">
   <header class="app-header">
     <div class="brand">
-      <span class="brand-mark" aria-hidden="true">🧭</span>
-      <div>
-        <h1>The Queensland Adventure</h1>
-        <p class="tagline">Family weekends &amp; school holidays across Queensland</p>
-      </div>
+      <span class="brand-mark" aria-hidden="true">QA</span>
+      <h1>The<br>Queensland<br>Adventure</h1>
     </div>
-    <button id="settings-btn" class="icon-btn" aria-label="Open settings">⚙️</button>
+    <div class="header-actions">
+      <button id="search-btn" class="icon-btn" aria-label="Go to search" onclick="var s=document.getElementById('search-input');s.scrollIntoView({block:'center'});s.focus({preventScroll:true});"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg></button>
+      <button id="settings-btn" class="icon-btn" aria-label="Open settings"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
+    </div>
   </header>
   <div class="holiday-banner" id="holiday-banner" hidden>
     <span id="holiday-banner-text" role="status"></span>
@@ -35,6 +38,7 @@
 
 <main class="wrap">
   <section id="view-find" aria-label="Find activities">
+    <p class="dek">This weekend<br>in Queensland</p>
     <div class="filter-bar" id="filter-bar">
       <label class="search">
         <span class="visually-hidden">Search activities</span>
