@@ -1,4 +1,4 @@
-# Bean There QLD — app (v1)
+# The Queensland Adventure — app (v1)
 
 A dependency-free, mobile-first web app: a Queensland kids/family weekend +
 school-holiday activity finder. No build step — GitHub Pages serves the

@@ -1,4 +1,4 @@
-/* Bean There QLD — warm, playful family aesthetic. Mobile-first. */
+/* The Queensland Adventure — warm, playful family aesthetic. Mobile-first. */
 
 :root {
   --teal: #0E7C6B;
@@ -53,7 +53,13 @@ h2 { font-size: 1.25rem; margin: 18px 0 10px; }
   display: flex; align-items: center; justify-content: space-between;
   background: var(--teal); color: #fff;
   padding: 10px 14px;
+  position: relative; background-size: cover; background-position: center 65%;
 }
+.app-header::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(7,66,59,0.55), rgba(7,66,59,0.8));
+}
+.app-header > * { position: relative; }
 .brand { display: flex; align-items: center; gap: 10px; }
 .brand-mark { font-size: 1.8rem; }
 .app-header h1 { font-size: 1.2rem; letter-spacing: 0.2px; }
@@ -99,13 +105,6 @@ h2 { font-size: 1.25rem; margin: 18px 0 10px; }
   border: 1.5px solid var(--line); border-radius: 12px; background: #fff;
 }
 .search input:focus { outline: 2px solid var(--teal); border-color: var(--teal); }
-
-.seg { display: flex; gap: 6px; margin-top: 10px; }
-.seg button {
-  flex: 1; border: 1.5px solid var(--line); background: #fff; border-radius: 12px;
-  padding: 9px 4px; font-size: 0.85rem; font-weight: 600; color: var(--ink); cursor: pointer;
-}
-.seg button[aria-pressed="true"] { background: var(--teal); border-color: var(--teal); color: #fff; }
 
 .filter-row { display: flex; gap: 8px; margin-top: 10px; }
 .filter-row input, .filter-row select {
@@ -162,8 +161,17 @@ h2 { font-size: 1.25rem; margin: 18px 0 10px; }
 
 .card {
   background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 14px; box-shadow: var(--shadow); position: relative;
+  padding: 14px; box-shadow: var(--shadow); position: relative; overflow: hidden;
 }
+.card-img {
+  display: block; width: calc(100% + 28px); margin: -14px -14px 12px;
+  aspect-ratio: 16 / 9; object-fit: cover; background: var(--sand);
+}
+.reco-img {
+  display: block; width: calc(100% + 24px); margin: -12px -12px 10px;
+  aspect-ratio: 16 / 10; object-fit: cover; background: var(--sand);
+}
+.photo-credit { font-size: 0.72rem; color: var(--muted); text-align: center; margin: 18px 0 4px; }
 .card-top { display: flex; align-items: flex-start; gap: 8px; }
 .card-top h3 { font-size: 1.05rem; flex: 1; }
 
@@ -270,7 +278,6 @@ dialog legend { font-weight: 700; padding: 0 6px; }
   display: block; width: 100%; margin-top: 4px; font-size: 1rem; padding: 9px 10px;
   border: 1.5px solid var(--line); border-radius: 10px;
 }
-.age-label { max-width: 110px; flex: none !important; }
 .interests { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
 .interests label {
   display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600;

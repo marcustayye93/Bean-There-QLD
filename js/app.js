@@ -1,4 +1,4 @@
-/* Bean There QLD — v1 app logic. Dependency-free vanilla JS.
+/* The Queensland Adventure — v1 app logic. Dependency-free vanilla JS.
  *
  * Pure helpers live at the top (no DOM access) so they can be unit-tested
  * in node: `node -e "const t=require('./js/app.js'); ..."`. The DOM app
@@ -36,6 +36,66 @@ const INTERESTS = [
   ['outdoor', 'Outdoors'],
   ['scouts', 'Scouts']
 ];
+
+/* ---- mood photos: decorative category stills, never a venue lookalike ---- */
+const U = 'https://images.unsplash.com/';
+const Q = '?w=900&q=70&auto=format&fit=crop';
+const CATEGORY_PHOTOS = {
+  water: [
+    U + 'photo-1530549387789-4c1017266635' + Q, // swimmer in pool lanes
+    U + 'photo-1576013551627-0cc20b96c2a7' + Q,  // resort pool
+    U + 'photo-1507525428034-b723cf961d3e' + Q   // beach at sunset
+  ],
+  playgrounds: [
+    'https://live.staticflickr.com/3794/9957671356_bd475e434a_b.jpg', // Toowoomba QLD playground (CC BY-SA)
+    'https://live.staticflickr.com/3302/3338689843_22d84905f4_b.jpg', // playground structure (CC BY-SA)
+    'https://live.staticflickr.com/4167/34262948212_47e8a944a7_b.jpg'  // park playground (CC0)
+  ],
+  soccer: [
+    U + 'photo-1579952363873-27f3bade9f55' + Q, // ball on grass
+    U + 'photo-1522778119026-d647f0596c20' + Q  // stadium
+  ],
+  basketball: [
+    U + 'photo-1546519638-68e109498ffc' + Q,  // hoop
+    U + 'photo-1519861531473-9200262188bf' + Q // ball on court
+  ],
+  craft: [
+    U + 'photo-1513364776144-60967b0f800f' + Q, // paint brushes
+    U + 'photo-1452860606245-08befc0ff44b' + Q   // craft supplies
+  ],
+  camps: [
+    U + 'photo-1504280390367-361c6d9f38f4' + Q, // tent
+    U + 'photo-1478131143081-80f7f84ca84d' + Q  // campfire
+  ],
+  scouts: [
+    U + 'photo-1478131143081-80f7f84ca84d' + Q, // campfire
+    U + 'photo-1504280390367-361c6d9f38f4' + Q  // tent
+  ],
+  lego: [
+    U + 'photo-1558060370-d644479cb6f7' + Q, // lego build
+    U + 'photo-1587654780291-39c9404d746b' + Q, // brick pile
+    U + 'photo-1566140967404-b8b3932483f5' + Q  // minifigures
+  ],
+  museums: [
+    U + 'photo-1566127444979-b3d2b654e3d7' + Q, // museum hall
+    U + 'photo-1554907984-15263bfd63bd' + Q      // gallery wall
+  ],
+  animals: [
+    U + 'photo-1546182990-dffeafbe841d' + Q, // lion
+    U + 'photo-1459262838948-3e2de6c1ec80' + Q, // koala
+    U + 'photo-1527118732049-c88155f2107c' + Q   // panda
+  ]
+};
+const HERO_PHOTO = 'https://live.staticflickr.com/42/112080998_d47077d191_b.jpg'; // Surfers Paradise, Gold Coast (CC BY-SA)
+
+/* Deterministic photo pick per activity so cards are stable across renders. */
+function photoFor(a) {
+  const pack = CATEGORY_PHOTOS[a.category] || CATEGORY_PHOTOS.playgrounds;
+  const s = String((a && a.id) || '');
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
+  return pack[h % pack.length];
+}
 
 function esc(s) {
   return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({
@@ -227,13 +287,6 @@ function bannerText(st) {
 function filterActivities(list, f) {
   const q = (f.q || '').trim().toLowerCase();
   const out = list.filter(a => {
-    if (f.mode === 'both') {
-      if (!(suitsAge(a, f.c1Age) && suitsAge(a, f.c2Age))) return false;
-    } else if (f.mode === 'younger') {
-      if (!suitsAge(a, f.youngerAge)) return false;
-    } else if (f.mode === 'older') {
-      if (!suitsAge(a, f.olderAge)) return false;
-    }
     if (f.category && a.category !== f.category) return false;
     if (f.freeOnly && a.price_aud !== 0) return false;
     if (q) {
@@ -283,10 +336,9 @@ function filterActivities(list, f) {
 }
 
 function recommended(list, f) {
-  // f: { c1Age, c1Interests, loc, bucketMin }
+  // f: { c1Interests, loc, bucketMin }
   return list.filter(a => {
     if (!(a.interests || []).some(i => f.c1Interests.includes(i))) return false;
-    if (!suitsAge(a, f.c1Age)) return false;
     if (f.loc && f.bucketMin !== Infinity) {
       const m = activityDrive(a, f.loc);
       if (m == null || m > f.bucketMin) return false;
@@ -319,7 +371,7 @@ function blockDays(p) {
 function planText(blockName, blockStart, blockEnd, days) {
   // days: [{ date: Date, items: [activity] }]
   const lines = [
-    'Bean There QLD — holiday plan',
+    'The Queensland Adventure — holiday plan',
     blockName + ' (' + fmtDay(blockStart) + ' – ' + fmtDay(blockEnd) + ')',
     ''
   ];
@@ -346,7 +398,7 @@ if (typeof module !== 'undefined' && module.exports) {
     bucketMinutes, bucketLabel, activityDrive,
     holidayPeriods, holidayStatus, lengthLabel, bannerText,
     filterActivities, recommended, encodePlan, decodePlan, blockDays, planText,
-    CATEGORIES, INTERESTS
+    CATEGORIES, INTERESTS, CATEGORY_PHOTOS, HERO_PHOTO, photoFor
   };
 }
 /* ==================== app state & DOM ==================== */
@@ -356,8 +408,8 @@ const LS_FAVS = 'btq-favourites';
 const LS_PLAN = 'btq-plan';
 
 const DEFAULT_SETTINGS = {
-  child1: { name: 'Levi', age: 7, interests: ['soccer', 'basketball', 'lego'] },
-  child2: { name: 'Mia', age: 4, interests: [] },
+  child1: { name: 'Levi', interests: ['soccer', 'basketball', 'lego'] },
+  child2: { name: 'Mia', interests: [] },
   postcode: ''
 };
 
@@ -367,7 +419,7 @@ let holidays = null;
 let postcodes = null;
 let postcodeLoc = null; // { suburb, lat, lng } | null
 let postcodeState = 'unset'; // unset | ok | unknown | nolookup
-let filters = { mode: 'both', category: '', freeOnly: false, q: '', bucket: 'any', sort: 'suggested', forHolidays: false };
+let filters = { category: '', freeOnly: false, q: '', bucket: 'any', sort: 'suggested', forHolidays: false };
 let currentTab = 'find';
 let planBlockIdx = 0;
 let plandateActivityId = null;
@@ -385,8 +437,6 @@ function loadSettings() {
     for (const k of ['child1', 'child2']) {
       if (s[k]) {
         if (typeof s[k].name === 'string' && s[k].name.trim()) out[k].name = s[k].name.trim().slice(0, 24);
-        const age = parseInt(s[k].age, 10);
-        if (!isNaN(age)) out[k].age = Math.min(16, Math.max(0, age));
         if (Array.isArray(s[k].interests)) {
           out[k].interests = s[k].interests.filter(i => INTERESTS.some(x => x[0] === i));
         }
@@ -416,18 +466,6 @@ function saveSettings() { localStorage.setItem(LS_SETTINGS, JSON.stringify(setti
 function saveFavs() { localStorage.setItem(LS_FAVS, JSON.stringify(favourites)); }
 function savePlan() { localStorage.setItem(LS_PLAN, JSON.stringify(plan)); }
 
-function kids() {
-  const c1 = settings.child1, c2 = settings.child2;
-  return c1.age <= c2.age ? { younger: c1, older: c2 } : { younger: c2, older: c1 };
-}
-
-function modeLabel() {
-  const { younger, older } = kids();
-  if (filters.mode === 'younger') return 'suits ' + younger.name + ' only';
-  if (filters.mode === 'older') return 'suits ' + older.name + ' only';
-  return 'suits both kids';
-}
-
 /* ---------- boot ---------- */
 
 function boot() {
@@ -437,7 +475,8 @@ function boot() {
 
   bindUI();
   buildInterestCheckboxes();
-  renderAgeSeg();
+  const hdr = document.querySelector('.app-header');
+  if (hdr) hdr.style.backgroundImage = 'url("' + HERO_PHOTO + '")';
   renderCategoryChips();
   setStickTop();
   window.addEventListener('resize', setStickTop);
@@ -563,16 +602,6 @@ function renderPostcodeNote() {
 
 /* ---------- filters UI ---------- */
 
-function renderAgeSeg() {
-  const { younger, older } = kids();
-  const seg = $('age-seg');
-  const btns = seg.querySelectorAll('button');
-  btns[0].textContent = 'Suits both kids';
-  btns[1].textContent = 'Suits ' + younger.name + ' only';
-  btns[2].textContent = 'Suits ' + older.name + ' only';
-  btns.forEach(b => b.setAttribute('aria-pressed', b.dataset.ageMode === filters.mode ? 'true' : 'false'));
-}
-
 function renderCategoryChips() {
   const el = $('category-chips');
   let html = '<button type="button" class="chip" data-action="set-category" data-category="" aria-pressed="' +
@@ -587,11 +616,7 @@ function renderCategoryChips() {
 }
 
 function currentFilterArgs() {
-  const { younger, older } = kids();
   return {
-    mode: filters.mode,
-    c1Age: settings.child1.age, c2Age: settings.child2.age,
-    youngerAge: younger.age, olderAge: older.age,
     c1Interests: settings.child1.interests, c2Interests: settings.child2.interests,
     category: filters.category, freeOnly: filters.freeOnly, q: filters.q,
     bucketMin: bucketMinutes(filters.bucket), loc: postcodeLoc,
@@ -639,6 +664,7 @@ function cardHTML(a, opts) {
   }
 
   return '<article class="card">' +
+    '<img class="card-img" src="' + esc(photoFor(a)) + '" alt="" loading="lazy">' +
     '<div class="card-top"><h3>' + esc(a.name) + '</h3>' +
     '<button type="button" class="heart" data-action="toggle-fav" data-id="' + esc(a.id) +
     '" aria-pressed="' + (fav ? 'true' : 'false') +
@@ -661,6 +687,7 @@ function recoCardHTML(a) {
   const fav = favourites.includes(a.id);
   const mins = postcodeLoc ? activityDrive(a, postcodeLoc) : null;
   return '<div class="reco-card">' +
+    '<img class="reco-img" src="' + esc(photoFor(a)) + '" alt="" loading="lazy">' +
     '<button type="button" class="heart" data-action="toggle-fav" data-id="' + esc(a.id) +
     '" aria-pressed="' + (fav ? 'true' : 'false') +
     '" aria-label="' + (fav ? 'Remove from favourites' : 'Save to favourites') + '">' +
@@ -674,7 +701,6 @@ function recoCardHTML(a) {
 
 function resultsCountHTML(n, total) {
   const parts = [n + (n === 1 ? ' activity' : ' activities')];
-  parts.push(modeLabel());
   if (postcodeLoc && filters.bucket !== 'any') parts.push('under ' + bucketLabel(filters.bucket));
   if (filters.category) parts.push(categoryLabel(filters.category));
   if (filters.freeOnly) parts.push('free');
@@ -690,11 +716,8 @@ function nextWiderBucket() {
 }
 
 function emptyStateHTML() {
-  const { younger, older } = kids();
   const wider = nextWiderBucket();
-  const altAgeMode = filters.mode === 'older' ? 'younger' : 'older';
-  const altKid = altAgeMode === 'younger' ? younger : older;
-  const bits = ['Nothing ' + modeLabel()];
+  const bits = ['Nothing found'];
   if (postcodeLoc && filters.bucket !== 'any') bits.push('within ' + bucketLabel(filters.bucket));
   if (filters.category) bits.push('in ' + categoryLabel(filters.category));
   if (filters.freeOnly) bits.push('that’s free');
@@ -703,10 +726,6 @@ function emptyStateHTML() {
   if (wider) {
     html += '<button type="button" class="btn btn-secondary" data-action="set-bucket" data-bucket="' + wider +
       '">Try under ' + esc(bucketLabel(wider)) + '</button>';
-  }
-  if (filters.mode !== altAgeMode) {
-    html += '<button type="button" class="btn btn-secondary" data-action="set-age-mode" data-age-mode="' + altAgeMode +
-      '">Try ' + esc(altKid.name) + ' only</button>';
   }
   html += '<button type="button" class="btn btn-secondary" data-action="reset-filters">Show everything</button>';
   html += '</div></div>';
@@ -720,12 +739,12 @@ function renderResults() {
 
   $('results-count').textContent = resultsCountHTML(list.length, activities.length);
 
-  // Recommended row: child1's interests ∩ age, within the travel bucket.
+  // Recommended row: child1's interests, within the travel bucket.
   const recoBox = $('recommended');
   const c1 = settings.child1;
   if (c1.interests.length) {
     const recos = recommended(activities, {
-      c1Age: c1.age, c1Interests: c1.interests, loc: postcodeLoc, bucketMin: bucketMinutes(filters.bucket)
+      c1Interests: c1.interests, loc: postcodeLoc, bucketMin: bucketMinutes(filters.bucket)
     });
     if (recos.length) {
       recoBox.hidden = false;
@@ -871,9 +890,7 @@ function buildInterestCheckboxes() {
 
 function fillSettingsForm() {
   $('c1-name').value = settings.child1.name;
-  $('c1-age').value = settings.child1.age;
   $('c2-name').value = settings.child2.name;
-  $('c2-age').value = settings.child2.age;
   $('settings-postcode').value = settings.postcode;
   for (const [kid, child] of [['c1', settings.child1], ['c2', settings.child2]]) {
     $(kid + '-interests').querySelectorAll('input').forEach(cb => {
@@ -909,8 +926,6 @@ function saveSettingsForm() {
 
   settings.child1.name = c1Name.slice(0, 24);
   settings.child2.name = c2Name.slice(0, 24);
-  settings.child1.age = Math.min(16, Math.max(0, parseInt($('c1-age').value, 10) || 0));
-  settings.child2.age = Math.min(16, Math.max(0, parseInt($('c2-age').value, 10) || 0));
   settings.child1.interests = readInterests('c1');
   settings.child2.interests = readInterests('c2');
   settings.postcode = pc;
@@ -922,7 +937,6 @@ function saveSettingsForm() {
 
   saveSettings();
   resolvePostcode();
-  renderAgeSeg();
   renderPostcodeNote();
   renderResults();
   $('settings-dialog').close();
@@ -934,7 +948,6 @@ function resetSettings() {
   saveSettings();
   fillSettingsForm();
   resolvePostcode();
-  renderAgeSeg();
   renderPostcodeNote();
   renderResults();
   toast('Settings reset to defaults');
@@ -1013,7 +1026,7 @@ function shareText() {
     });
     text = planText(block.name, parseDay(block.start), parseDay(block.end), days);
   } else {
-    text = 'Bean There QLD — holiday plan\n\n' +
+    text = 'The Queensland Adventure — holiday plan\n\n' +
       (plan.length ? plan.map(e => '• ' + e.date).join('\n') : 'Nothing planned yet.');
   }
   copyText(text, 'Itinerary copied as text');
@@ -1084,15 +1097,6 @@ function bindUI() {
   // Tabs
   document.querySelectorAll('.tab').forEach(t =>
     t.addEventListener('click', () => switchTab(t.dataset.tab)));
-
-  // Age segmented control
-  $('age-seg').addEventListener('click', e => {
-    const b = e.target.closest('button[data-age-mode]');
-    if (!b) return;
-    filters.mode = b.dataset.ageMode;
-    renderAgeSeg();
-    renderResults();
-  });
 
   // Search (debounced)
   $('search-input').addEventListener('input', e => {
@@ -1183,11 +1187,6 @@ function bindUI() {
       renderCategoryChips();
       renderResults();
     }
-    else if (action === 'set-age-mode') {
-      filters.mode = el.dataset.ageMode;
-      renderAgeSeg();
-      renderResults();
-    }
     else if (action === 'set-bucket') {
       filters.bucket = el.dataset.bucket;
       $('travel-select').value = filters.bucket;
@@ -1195,11 +1194,10 @@ function bindUI() {
       renderResults();
     }
     else if (action === 'reset-filters') {
-      filters = { mode: 'both', category: '', freeOnly: false, q: '', bucket: 'any', sort: 'suggested', forHolidays: filters.forHolidays };
+      filters = { category: '', freeOnly: false, q: '', bucket: 'any', sort: 'suggested', forHolidays: filters.forHolidays };
       $('search-input').value = '';
       $('travel-select').value = 'any';
       $('sort-select').value = 'suggested';
-      renderAgeSeg();
       renderCategoryChips();
       renderResults();
     }
