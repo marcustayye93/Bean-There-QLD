@@ -48,6 +48,16 @@ Explanatory page: https://education.qld.gov.au/about-us/calendar/school-holidays
 | Date verified | 2026-09-10 |
 | Records | All 22 pools in the source → 22 live `water` records. The dataset gives no prices, so `price_aud` is null with `price_note: "Entry fees may apply — check council site"`. Suburb is parsed from the last component of the address. |
 
+| Item | Detail |
+|---|---|
+| Label | Google Places — hand-verified major attractions |
+| URL | https://developers.google.com/maps/documentation/places (via `gplaces` CLI) |
+| Access | Places API (New), `custom.google-places` credential |
+| Licence | Place data © Google; official venue websites linked per record |
+| Used for | live |
+| Date verified | 2026-09-10 |
+| Records | 13 hand-picked major family attractions, all confirmed OPERATIONAL via Places: Queensland Museum Kurilpa, Lone Pine Koala Sanctuary, Sir Thomas Brisbane Planetarium, Gallery of Modern Art, Brisbane Botanic Gardens Mt Coot-tha, South Bank Parklands, Daisy Hill Koala Centre (Brisbane); Sea World, Dreamworld, Wet'n'Wild Gold Coast, Currumbin Wildlife Sanctuary (Gold Coast); Australia Zoo, SEA LIFE Sunshine Coast Aquarium (Sunshine Coast). Coordinates, official websites and booking links come from Places; no prices are invented — `price_aud` is 0 only for confirmed-free venues (public gardens/parklands, Daisy Hill Koala Centre, GOMA/QM general entry), otherwise null with `price_note: "Paid entry — see official site for prices"`. New `theme-parks` category added for Dreamworld (with a verified roller-coaster mood photo). |
+
 ### Zone rectangles
 
 Applied in this precedence order (first match wins); anything unmatched is `"Queensland"`:

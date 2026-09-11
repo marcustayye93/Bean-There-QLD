@@ -189,6 +189,8 @@ h2 {
   margin: 0; padding: 10px 34px 10px 12px;
 }
 .reco-card .reco-meta { font-size: 0.8rem; color: var(--muted); margin: 8px 12px 0; }
+.reco-link { display: block; color: inherit; text-decoration: none; }
+.reco-link:hover h3 { text-decoration: underline; }
 .reco-card .heart {
   position: absolute; top: 6px; right: 6px; z-index: 2;
   background: #fff; border: 1px solid var(--ink); border-radius: var(--radius);

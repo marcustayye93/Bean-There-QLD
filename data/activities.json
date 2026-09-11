@@ -58,7 +58,8 @@
         "license": "keyed distributor API",
         "used": "skipped"
       }
-    ]
+    ],
+    "activity_count": 97
   },
   "activities": [
     {
@@ -2436,6 +2437,375 @@
       "holiday_only": false,
       "interests": [
         "craft"
+      ]
+    },
+    {
+      "id": "attr-qldmuseum",
+      "name": "Queensland Museum Kurilpa",
+      "description": "Queensland's state museum at South Bank, home to the Sciencentre's hands-on science exhibits.",
+      "suburb": "South Brisbane",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": null,
+      "category": "museums",
+      "indoor": "indoor",
+      "price_aud": 0,
+      "price_note": "Free general entry; some exhibitions ticketed",
+      "duration": null,
+      "booking_url": "https://www.museum.qld.gov.au/kurilpa",
+      "booking_required": false,
+      "lat": -27.473109,
+      "lng": 153.018189,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://www.museum.qld.gov.au/kurilpa"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "science"
+      ]
+    },
+    {
+      "id": "attr-lonepine",
+      "name": "Lone Pine Koala Sanctuary",
+      "description": "Koala sanctuary on the Brisbane River with native Australian wildlife.",
+      "suburb": "Fig Tree Pocket",
+      "region": "Brisbane",
+      "zone": "West Brisbane",
+      "age_min": 0,
+      "age_max": null,
+      "category": "animals",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Paid entry — see official site for prices",
+      "duration": null,
+      "booking_url": "https://lonepinekoalasanctuary.com/",
+      "booking_required": false,
+      "lat": -27.533782,
+      "lng": 152.968815,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://lonepinekoalasanctuary.com/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "animals"
+      ]
+    },
+    {
+      "id": "attr-planetarium",
+      "name": "Sir Thomas Brisbane Planetarium",
+      "description": "Planetarium with astronomy shows and displays, in the Botanic Gardens at Mt Coot-tha.",
+      "suburb": "Mount Coot-tha",
+      "region": "Brisbane",
+      "zone": "West Brisbane",
+      "age_min": 0,
+      "age_max": null,
+      "category": "museums",
+      "indoor": "indoor",
+      "price_aud": null,
+      "price_note": "Paid entry — see official site for prices",
+      "duration": null,
+      "booking_url": "http://www.brisbane.qld.gov.au/planetarium",
+      "booking_required": false,
+      "lat": -27.475731,
+      "lng": 152.976926,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "http://www.brisbane.qld.gov.au/planetarium"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "science"
+      ]
+    },
+    {
+      "id": "attr-seaworld",
+      "name": "Sea World",
+      "description": "Marine park at Main Beach with marine animals, shows and rides.",
+      "suburb": "Main Beach",
+      "region": "Gold Coast",
+      "zone": "Gold Coast",
+      "age_min": 0,
+      "age_max": null,
+      "category": "animals",
+      "indoor": "both",
+      "price_aud": null,
+      "price_note": "Paid entry — see official site for prices",
+      "duration": null,
+      "booking_url": "https://seaworld.com.au/",
+      "booking_required": false,
+      "lat": -27.957242,
+      "lng": 153.425516,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://seaworld.com.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "animals",
+        "water"
+      ]
+    },
+    {
+      "id": "attr-dreamworld",
+      "name": "Dreamworld",
+      "description": "Theme park at Coomera with rides and wildlife areas.",
+      "suburb": "Coomera",
+      "region": "Gold Coast",
+      "zone": "Gold Coast",
+      "age_min": 0,
+      "age_max": null,
+      "category": "theme-parks",
+      "indoor": "both",
+      "price_aud": null,
+      "price_note": "Paid entry — see official site for prices",
+      "duration": null,
+      "booking_url": "https://www.dreamworld.com.au/",
+      "booking_required": false,
+      "lat": -27.863508,
+      "lng": 153.315253,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://www.dreamworld.com.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "theme-parks",
+        "animals"
+      ]
+    },
+    {
+      "id": "attr-australiazoo",
+      "name": "Australia Zoo",
+      "description": "Wildlife zoo at Beerwah on the Sunshine Coast.",
+      "suburb": "Beerwah",
+      "region": "Sunshine Coast",
+      "zone": "Sunshine Coast",
+      "age_min": 0,
+      "age_max": null,
+      "category": "animals",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Paid entry — see official site for prices",
+      "duration": null,
+      "booking_url": "https://www.australiazoo.com.au/",
+      "booking_required": false,
+      "lat": -26.835718,
+      "lng": 152.963113,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://www.australiazoo.com.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "animals"
+      ]
+    },
+    {
+      "id": "attr-wetnwild",
+      "name": "Wet'n'Wild Gold Coast",
+      "description": "Water park at Oxenford with slides and pools.",
+      "suburb": "Oxenford",
+      "region": "Gold Coast",
+      "zone": "Gold Coast",
+      "age_min": 0,
+      "age_max": null,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Paid entry — see official site for prices",
+      "duration": null,
+      "booking_url": "https://wetnwild.com.au/",
+      "booking_required": false,
+      "lat": -27.91454,
+      "lng": 153.318249,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://wetnwild.com.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water"
+      ]
+    },
+    {
+      "id": "attr-currumbin",
+      "name": "Currumbin Wildlife Sanctuary",
+      "description": "Wildlife sanctuary at Currumbin with native Australian animals.",
+      "suburb": "Currumbin",
+      "region": "Gold Coast",
+      "zone": "Gold Coast",
+      "age_min": 0,
+      "age_max": null,
+      "category": "animals",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Paid entry — see official site for prices",
+      "duration": null,
+      "booking_url": "https://currumbinsanctuary.com.au/",
+      "booking_required": false,
+      "lat": -28.135558,
+      "lng": 153.488543,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://currumbinsanctuary.com.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "animals"
+      ]
+    },
+    {
+      "id": "attr-sealife-sc",
+      "name": "SEA LIFE Sunshine Coast Aquarium",
+      "description": "Aquarium at Mooloolaba with marine life displays.",
+      "suburb": "Mooloolaba",
+      "region": "Sunshine Coast",
+      "zone": "Sunshine Coast",
+      "age_min": 0,
+      "age_max": null,
+      "category": "animals",
+      "indoor": "indoor",
+      "price_aud": null,
+      "price_note": "Paid entry — see official site for prices",
+      "duration": null,
+      "booking_url": "https://www.visitsealife.com/sunshine-coast/",
+      "booking_required": false,
+      "lat": -26.683077,
+      "lng": 153.121921,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://www.visitsealife.com/sunshine-coast/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "animals",
+        "science"
+      ]
+    },
+    {
+      "id": "attr-daisyhill",
+      "name": "Daisy Hill Koala Centre",
+      "description": "Koala education centre in Daisy Hill Conservation Park.",
+      "suburb": "Daisy Hill",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": null,
+      "category": "animals",
+      "indoor": "both",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": null,
+      "booking_url": "https://parks.qld.gov.au/parks/daisy-hill-koala-centre",
+      "booking_required": false,
+      "lat": -27.62288,
+      "lng": 153.156764,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://parks.qld.gov.au/parks/daisy-hill-koala-centre"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "animals"
+      ]
+    },
+    {
+      "id": "attr-goma",
+      "name": "Gallery of Modern Art",
+      "description": "Modern art gallery at South Bank with a dedicated children's art centre.",
+      "suburb": "South Brisbane",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": null,
+      "category": "museums",
+      "indoor": "indoor",
+      "price_aud": 0,
+      "price_note": "Free general entry",
+      "duration": null,
+      "booking_url": "https://www.qagoma.qld.gov.au/",
+      "booking_required": false,
+      "lat": -27.47056,
+      "lng": 153.017133,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://www.qagoma.qld.gov.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "craft",
+        "science"
+      ]
+    },
+    {
+      "id": "attr-botanicgardens",
+      "name": "Brisbane Botanic Gardens Mt Coot-tha",
+      "description": "Botanic gardens at Mt Coot-tha with themed gardens and walks.",
+      "suburb": "Mount Coot-tha",
+      "region": "Brisbane",
+      "zone": "West Brisbane",
+      "age_min": 0,
+      "age_max": null,
+      "category": "playgrounds",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": null,
+      "booking_url": "https://www.brisbane.qld.gov.au/facilities-recreation/parks-venues/parks/brisbane-botanic-gardens-mount-coot-tha",
+      "booking_required": false,
+      "lat": -27.474833,
+      "lng": 152.977197,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://www.brisbane.qld.gov.au/facilities-recreation/parks-venues/parks/brisbane-botanic-gardens-mount-coot-tha"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "outdoor"
+      ]
+    },
+    {
+      "id": "attr-southbank",
+      "name": "South Bank Parklands",
+      "description": "Riverside parklands at South Brisbane with Streets Beach lagoon, playgrounds and walks.",
+      "suburb": "South Brisbane",
+      "region": "Brisbane",
+      "zone": "South Brisbane",
+      "age_min": 0,
+      "age_max": null,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": 0,
+      "price_note": "Free entry",
+      "duration": null,
+      "booking_url": "https://whatsonsouthbank.com.au/",
+      "booking_required": false,
+      "lat": -27.475367,
+      "lng": 153.020807,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://whatsonsouthbank.com.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "outdoor"
       ]
     }
   ]

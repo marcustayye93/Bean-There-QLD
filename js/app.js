@@ -22,6 +22,7 @@ const CATEGORIES = [
   ['playgrounds', 'Playgrounds & parks'],
   ['museums', 'Museums & science'],
   ['animals', 'Animals & zoos'],
+  ['theme-parks', 'Theme parks'],
   ['water', 'Water play']
 ];
 
@@ -31,6 +32,7 @@ const INTERESTS = [
   ['lego', 'Lego'],
   ['craft', 'Craft'],
   ['animals', 'Animals'],
+  ['theme-parks', 'Theme parks'],
   ['water', 'Water play'],
   ['science', 'Science'],
   ['outdoor', 'Outdoors'],
@@ -84,6 +86,9 @@ const CATEGORY_PHOTOS = {
     U + 'photo-1546182990-dffeafbe841d' + Q, // lion
     U + 'photo-1459262838948-3e2de6c1ec80' + Q, // koala
     U + 'photo-1527118732049-c88155f2107c' + Q   // panda
+  ],
+  'theme-parks': [
+    U + 'photo-1516051662687-567d7c4e8f6a' + Q // roller coaster
   ]
 };
 const HERO_PHOTO = 'https://live.staticflickr.com/42/112080998_d47077d191_b.jpg'; // Surfers Paradise, Gold Coast (CC BY-SA)
@@ -475,8 +480,6 @@ function boot() {
 
   bindUI();
   buildInterestCheckboxes();
-  const hdr = document.querySelector('.app-header');
-  if (hdr) hdr.style.backgroundImage = 'url("' + HERO_PHOTO + '")';
   renderCategoryChips();
   setStickTop();
   window.addEventListener('resize', setStickTop);
@@ -686,13 +689,16 @@ function cardHTML(a, opts) {
 function recoCardHTML(a) {
   const fav = favourites.includes(a.id);
   const mins = postcodeLoc ? activityDrive(a, postcodeLoc) : null;
+  const url = a.booking_url || (a.source && a.source.url) || null;
+  const img = '<img class="reco-img" src="' + esc(photoFor(a)) + '" alt="" loading="lazy">';
+  const title = '<h3>' + esc(a.name) + '</h3>';
   return '<div class="reco-card">' +
-    '<img class="reco-img" src="' + esc(photoFor(a)) + '" alt="" loading="lazy">' +
+    (url ? '<a class="reco-link" href="' + esc(url) + '" target="_blank" rel="noopener" aria-label="' + esc(a.name) + '">' + img + '</a>' : img) +
     '<button type="button" class="heart" data-action="toggle-fav" data-id="' + esc(a.id) +
     '" aria-pressed="' + (fav ? 'true' : 'false') +
     '" aria-label="' + (fav ? 'Remove from favourites' : 'Save to favourites') + '">' +
     (fav ? '♥' : '♡') + '</button>' +
-    '<h3>' + esc(a.name) + '</h3>' +
+    (url ? '<a class="reco-link" href="' + esc(url) + '" target="_blank" rel="noopener">' + title + '</a>' : title) +
     '<p class="reco-meta">' + esc([a.suburb, priceLabel(a)].filter(Boolean).join(' · ')) + '</p>' +
     (mins != null ? '<p class="reco-meta">' + esc(driveLabel(mins)) + '</p>' : '') +
     (a.live === false ? '<p class="reco-meta">Sample listing</p>' : '') +
@@ -739,16 +745,16 @@ function renderResults() {
 
   $('results-count').textContent = resultsCountHTML(list.length, activities.length);
 
-  // Recommended row: child1's interests, within the travel bucket.
+  // Recommended row: both children's interests, within the travel bucket.
   const recoBox = $('recommended');
-  const c1 = settings.child1;
-  if (c1.interests.length) {
+  const recoInterests = [...new Set([...settings.child1.interests, ...settings.child2.interests])];
+  if (recoInterests.length) {
     const recos = recommended(activities, {
-      c1Interests: c1.interests, loc: postcodeLoc, bucketMin: bucketMinutes(filters.bucket)
+      c1Interests: recoInterests, loc: postcodeLoc, bucketMin: bucketMinutes(filters.bucket)
     });
     if (recos.length) {
       recoBox.hidden = false;
-      $('recommended-title').textContent = 'Recommended for ' + c1.name;
+      $('recommended-title').textContent = 'Recommended';
       $('recommended-row').innerHTML = recos.map(recoCardHTML).join('');
     } else {
       recoBox.hidden = true;
@@ -919,7 +925,7 @@ function saveSettingsForm() {
   const c1Name = $('c1-name').value.trim();
   const c2Name = $('c2-name').value.trim();
   if (!c1Name || !c2Name) {
-    err.textContent = 'Both children need a name (it’s used in labels like “Recommended for …”).';
+    err.textContent = 'Both children need a name.';
     err.hidden = false;
     return;
   }
@@ -1009,7 +1015,8 @@ async function copyText(str, okMsg) {
 }
 
 function shareLink() {
-  const url = location.origin + location.pathname + '#plan=' + encodePlan(plan);
+  const base = /^https?:$/.test(location.protocol) ? location.origin + location.pathname : location.href.split('#')[0];
+  const url = base + '#plan=' + encodePlan(plan);
   copyText(url, plan.length ? 'Share link copied' : 'Share link copied (plan is empty)');
 }
 
@@ -1118,6 +1125,7 @@ function bindUI() {
     settings.postcode = v;
     saveSettings();
     resolvePostcode();
+    if (!v) { filters.bucket = 'any'; $('travel-select').value = 'any'; }
     renderPostcodeNote();
     renderResults();
   });
@@ -1176,7 +1184,7 @@ function bindUI() {
     const action = el.dataset.action;
     if (action === 'toggle-fav') toggleFav(el.dataset.id);
     else if (action === 'open-plan-date') openPlanDate(el.dataset.id);
-    else if (action === 'open-settings') { fillSettingsForm(); $('settings-dialog').showModal(); }
+    else if (action === 'open-settings') { fillSettingsForm(); const dlg = $('settings-dialog'); if (typeof dlg.showModal === 'function') dlg.showModal(); }
     else if (action === 'set-category') {
       filters.category = el.dataset.category;
       renderCategoryChips();
