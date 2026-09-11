@@ -343,6 +343,7 @@ function filterActivities(list, f) {
 function recommended(list, f) {
   // f: { c1Interests, loc, bucketMin }
   return list.filter(a => {
+    if (a.live === false) return false; // never recommend sample listings
     if (!(a.interests || []).some(i => f.c1Interests.includes(i))) return false;
     if (f.loc && f.bucketMin !== Infinity) {
       const m = activityDrive(a, f.loc);
@@ -413,8 +414,8 @@ const LS_FAVS = 'btq-favourites';
 const LS_PLAN = 'btq-plan';
 
 const DEFAULT_SETTINGS = {
-  child1: { name: 'Levi', interests: ['soccer', 'basketball', 'lego'] },
-  child2: { name: 'Mia', interests: [] },
+  child1: { name: 'Child 1', interests: [] },
+  child2: { name: 'Child 2', interests: [] },
   postcode: ''
 };
 
