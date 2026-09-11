@@ -56,7 +56,8 @@ Explanatory page: https://education.qld.gov.au/about-us/calendar/school-holidays
 | Licence | Place data © Google; official venue websites linked per record |
 | Used for | live |
 | Date verified | 2026-09-10 |
-| Records | 13 hand-picked major family attractions, all confirmed OPERATIONAL via Places: Queensland Museum Kurilpa, Lone Pine Koala Sanctuary, Sir Thomas Brisbane Planetarium, Gallery of Modern Art, Brisbane Botanic Gardens Mt Coot-tha, South Bank Parklands, Daisy Hill Koala Centre (Brisbane); Sea World, Dreamworld, Wet'n'Wild Gold Coast, Currumbin Wildlife Sanctuary (Gold Coast); Australia Zoo, SEA LIFE Sunshine Coast Aquarium (Sunshine Coast). Coordinates, official websites and booking links come from Places; no prices are invented — `price_aud` is 0 only for confirmed-free venues (public gardens/parklands, Daisy Hill Koala Centre, GOMA/QM general entry), otherwise null with `price_note: "Paid entry — see official site for prices"`. New `theme-parks` category added for Dreamworld (with a verified roller-coaster mood photo). |
+| Records | 13 hand-picked major family attractions, all confirmed OPERATIONAL via Places (verified 2026-09-10): Queensland Museum Kurilpa, Lone Pine Koala Sanctuary, Sir Thomas Brisbane Planetarium, Gallery of Modern Art, Brisbane Botanic Gardens Mt Coot-tha, South Bank Parklands, Daisy Hill Koala Centre (Brisbane); Sea World, Dreamworld, Wet'n'Wild Gold Coast, Currumbin Wildlife Sanctuary (Gold Coast); Australia Zoo, SEA LIFE Sunshine Coast Aquarium (Sunshine Coast). Coordinates, official websites and booking links come from Places; no prices are invented — `price_aud` is 0 only for confirmed-free venues (public gardens/parklands, Daisy Hill Koala Centre, GOMA/QM general entry), otherwise null with `price_note: "Paid entry — see official site for prices"`. New `theme-parks` category added for Dreamworld (with a verified roller-coaster mood photo). |
+| Batch 3 (verified 2026-09-12) | 24 further venues, all confirmed OPERATIONAL via Places: Museum of Brisbane, Queensland Maritime Museum, QPAC, Brisbane Powerhouse (Brisbane); David Fleay Wildlife Park, HOTA Gallery, HOTA Home of the Arts, GC Aqua Park (Gold Coast); Bli Bli Watersports, Aussie World (Sunshine Coast); Ipswich Art Gallery, Ipswich Nature Centre (Ipswich — note: Nature Centre partially closed, check official site); Logan Art Gallery, Kingston Butter Factory (Logan); Redland Art Gallery, Redlands Coast Museum (Redlands — children under 14 free, adults pay, per official site); Abbey Museum (Caboolture), Redcliffe Museum (Moreton Bay); Walkabout Creek Discovery Centre (Brisbane); Queensland Museum Cobb+Co, Darling Downs Zoo (Toowoomba); Queensland Museum Tropics (Townsville); Rockhampton Zoo (Rockhampton); WhiteWater World (Gold Coast). New `shows` category + interest added for the performing-arts venues (with verified theatre mood photos). Queensland Museum Rail Workshops (Ipswich) was researched but excluded — Google Places reports it CLOSED_TEMPORARILY. Free-entry claims were only kept where the official site states them; all other venues use `price_aud: null` with an honest `price_note`. |
 
 ### Zone rectangles
 
@@ -129,6 +130,41 @@ explicit "ages X–Y"); everything else gets an `age_hint` and null bounds.
 | Licence | Eventbrite API terms; review queue only |
 | Fragility | **High (SISTIC-class)** — undocumented endpoint; failures report the HTTP status and a body snippet without breaking the build. The `dates` field takes enum strings only (`future`, `today`, `this_weekend`) — no server-side custom date range — so the adapter sweeps `dates=["future"]` with a family-biasing query (`q="kids family children"`, ~265 events/city instead of ~3,200) and filters client-side to the 21-day window by `start_date`. The endpoint publishes no venue name, no price and no age range; candidates carry the area (from `locations[]`) with null venue/price and an explicit `age_hint`. |
 | Date verified | 2026-09-10 (live tokened run: 160 candidates in the 21-day window across the three cities, e.g. Forest Family Sundays, Junior Explorers) |
+
+### Listing/ticketing discovery — `scripts/fetch-listings.py` (added 2026-09-12)
+
+Second discovery script, same review-queue contract: appends `status: "proposed"`
+records to `data/candidates.json`, deduplicated by id (source + source id), and
+**never touches `data/activities.json`**. Prints a machine-readable JSON summary
+on stdout (cron reporting); progress chatter goes to stderr.
+
+Weekly cron command (run from the repo root):
+
+```bash
+cd ~/workspace/bean-there-qld && python3 scripts/fetch-listings.py --all
+```
+
+| Source | Verdict (evaluated 2026-09-12) | What it is good for |
+|---|---|---|
+| **Ticketmaster Discovery API** (official, via the `ticketmaster` CLI — no user setup) | **Adapter built.** Keyword searches (`kids`, `family`, `Bluey`, `circus`, `puppet`, `dinosaur`) across AU, filtered client-side to `stateCode == QLD` (the API's `city=` parameter silently misses venues such as South Brisbane). Family filter: keep `classifications[].family == true` or Arts & Theatre/Family/Miscellaneous segments; drop 18+ and gambling-adjacent (racedays, casinos) events. Maps name, date, venue + lat/lng, `priceRanges` → price note, checkout URL. | Occasional high-value touring shows (Bluey's Big Play, Disney on Ice, circuses) with real dates, venues, coordinates and prices. |
+| **The Urban List** | **Adapter built.** `robots.txt` explicitly allows crawling; per-city sitemaps with `lastmod`. Recently-updated Brisbane / Gold Coast / Sunshine Coast family & kids guide articles become *venue leads* (title + URL — a human verifies each venue, articles are guides not listings). | Steady drip of curated family guide articles; each one is a starting point for venue verification. |
+| **WeekendNotes Brisbane** (family-friendly, festivals, markets, whats-on) | **Adapter built.** No `robots.txt` served (default allow); category pages scraped for article links, each article fetched once for `og:title` + first date-like snippet. Candidates carry an explicit "verify from the article" note. | Community event write-ups with usable date text; the human reviewer reads the linked article before promoting. |
+
+**Sources evaluated and NOT automated:**
+
+- **Time Out Brisbane** — no public API and no event data feeds; site terms restrict automated reproduction of its editorial content. Not scraped.
+- **Concrete Playground** — no public API; same terms concern. Not scraped.
+- **Ticketek** — no public discovery API and no self-serve affiliate program; event-data access is partnership-only via TEG (Ticketek's parent). Not scraped. Next step if Marcus wants it: contact TEG partnerships about an affiliate/data arrangement.
+- **LADbible** (ladbible.com — the "LED Bible" Marcus named) — evaluated 2026-09-12: viral news/entertainment publisher with an Australia section, but no family listings, events, or venue guides. Unsuitable as a discovery source.
+- **Eventfinda** — off-limits per Marcus (declined 2026-09-10).
+
+Honest yield note (2026-09-12): the Ticketmaster adapter is working as designed,
+but current QLD family inventory through these keywords is thin — 6 API calls
+returned 90 unique AU events, of which only 7 had QLD venues (all Ascot
+"Family Day Raceday" events, excluded as gambling-adjacent). Seasonal touring
+shows will lift this; the adapter is cron-safe and will pick them up
+automatically. The Urban List + WeekendNotes adapters added 43 genuine
+candidates in the first run (queue total 503).
 
 ## File: `data/postcodes.json`
 

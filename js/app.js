@@ -23,7 +23,8 @@ const CATEGORIES = [
   ['museums', 'Museums & science'],
   ['animals', 'Animals & zoos'],
   ['theme-parks', 'Theme parks'],
-  ['water', 'Water play']
+  ['water', 'Water play'],
+  ['shows', 'Shows & performing arts']
 ];
 
 const INTERESTS = [
@@ -36,7 +37,8 @@ const INTERESTS = [
   ['water', 'Water play'],
   ['science', 'Science'],
   ['outdoor', 'Outdoors'],
-  ['scouts', 'Scouts']
+  ['scouts', 'Scouts'],
+  ['shows', 'Shows']
 ];
 
 /* ---- mood photos: decorative category stills, never a venue lookalike ---- */
@@ -89,6 +91,10 @@ const CATEGORY_PHOTOS = {
   ],
   'theme-parks': [
     U + 'photo-1516051662687-567d7c4e8f6a' + Q // roller coaster
+  ],
+  shows: [
+    U + 'photo-1507924538820-ede94a04019d' + Q, // theatre stage
+    U + 'photo-1514306191717-452ec28c7814' + Q  // concert crowd
   ]
 };
 const HERO_PHOTO = 'https://live.staticflickr.com/42/112080998_d47077d191_b.jpg'; // Surfers Paradise, Gold Coast (CC BY-SA)

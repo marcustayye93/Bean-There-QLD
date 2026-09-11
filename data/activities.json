@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated": "2026-09-10",
-    "live_count": 72,
+    "generated": "2026-09-12",
+    "live_count": 109,
     "sample_count": 12,
     "sources": [
       {
@@ -59,7 +59,7 @@
         "used": "skipped"
       }
     ],
-    "activity_count": 97
+    "activity_count": 121
   },
   "activities": [
     {
@@ -2806,6 +2806,680 @@
       "interests": [
         "water",
         "outdoor"
+      ]
+    },
+    {
+      "id": "attr-mob",
+      "name": "Museum of Brisbane",
+      "description": "Social history museum and art gallery on Level 3 of Brisbane City Hall, with exhibitions, tours and MoB Kids family programs.",
+      "suburb": "Brisbane City",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": null,
+      "category": "museums",
+      "indoor": "indoor",
+      "price_aud": null,
+      "price_note": "Check official site for entry prices",
+      "duration": null,
+      "booking_url": "https://www.museumofbrisbane.com.au/",
+      "booking_required": false,
+      "lat": -27.4686797,
+      "lng": 153.0238277,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://www.museumofbrisbane.com.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "science",
+        "craft"
+      ]
+    },
+    {
+      "id": "attr-maritime",
+      "name": "Queensland Maritime Museum",
+      "description": "Maritime museum at South Brisbane exploring Queensland's seafaring history, with historic vessels and displays.",
+      "suburb": "South Brisbane",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": null,
+      "category": "museums",
+      "indoor": "both",
+      "price_aud": null,
+      "price_note": "Check official site for entry prices",
+      "duration": null,
+      "booking_url": "https://www.maritimemuseum.com.au/",
+      "booking_required": false,
+      "lat": -27.4818335,
+      "lng": 153.0256466,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://www.maritimemuseum.com.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "science"
+      ]
+    },
+    {
+      "id": "attr-cobbco",
+      "name": "Queensland Museum Cobb+Co",
+      "description": "Queensland Museum's Toowoomba site celebrating horse-drawn transport and coachbuilding history.",
+      "suburb": "Toowoomba City",
+      "region": "Toowoomba",
+      "zone": "Queensland",
+      "age_min": 0,
+      "age_max": null,
+      "category": "museums",
+      "indoor": "both",
+      "price_aud": null,
+      "price_note": "Check official site for entry prices",
+      "duration": null,
+      "booking_url": "https://www.museum.qld.gov.au/cobb-and-co",
+      "booking_required": false,
+      "lat": -27.5555214,
+      "lng": 151.9646503,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://www.museum.qld.gov.au/cobb-and-co"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "science"
+      ]
+    },
+    {
+      "id": "attr-abbey",
+      "name": "Abbey Museum of Art and Archaeology",
+      "description": "Museum of art and archaeology at Caboolture with collections spanning ancient civilisations.",
+      "suburb": "Caboolture",
+      "region": "Moreton Bay",
+      "zone": "Moreton Bay",
+      "age_min": 0,
+      "age_max": null,
+      "category": "museums",
+      "indoor": "both",
+      "price_aud": null,
+      "price_note": "Check official site for entry prices",
+      "duration": null,
+      "booking_url": "http://abbeymuseum.com.au/",
+      "booking_required": false,
+      "lat": -27.070778500000003,
+      "lng": 153.02305149999998,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "http://abbeymuseum.com.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "science"
+      ]
+    },
+    {
+      "id": "attr-loganart",
+      "name": "Logan Art Gallery",
+      "description": "Council art gallery at Logan Central with rotating exhibitions.",
+      "suburb": "Logan Central",
+      "region": "Logan",
+      "zone": "Logan",
+      "age_min": 0,
+      "age_max": null,
+      "category": "museums",
+      "indoor": "indoor",
+      "price_aud": null,
+      "price_note": "Check official site for entry prices",
+      "duration": null,
+      "booking_url": "https://www.logan.qld.gov.au/artgallery",
+      "booking_required": false,
+      "lat": -27.6422793,
+      "lng": 153.1047811,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://www.logan.qld.gov.au/artgallery"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "craft"
+      ]
+    },
+    {
+      "id": "attr-redlandart",
+      "name": "Redland Art Gallery",
+      "description": "Council art gallery at Cleveland with exhibitions, family fun days and drop-in activities.",
+      "suburb": "Cleveland",
+      "region": "Redlands",
+      "zone": "Redlands",
+      "age_min": 0,
+      "age_max": null,
+      "category": "museums",
+      "indoor": "indoor",
+      "price_aud": null,
+      "price_note": "Check official site for entry prices",
+      "duration": null,
+      "booking_url": "https://artgallery.redland.qld.gov.au/",
+      "booking_required": false,
+      "lat": -27.5260309,
+      "lng": 153.266763,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://artgallery.redland.qld.gov.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "craft"
+      ]
+    },
+    {
+      "id": "attr-redlandsmuseum",
+      "name": "Redlands Coast Museum",
+      "description": "Community museum at Cleveland with local history collections, discovery zones for kids and school holiday craft programs.",
+      "suburb": "Cleveland",
+      "region": "Redlands",
+      "zone": "Redlands",
+      "age_min": 0,
+      "age_max": null,
+      "category": "museums",
+      "indoor": "indoor",
+      "price_aud": null,
+      "price_note": "Free entry for children under 14; general entry applies for adults",
+      "duration": null,
+      "booking_url": "https://redlandscoastmuseum.org.au/",
+      "booking_required": false,
+      "lat": -27.5342415,
+      "lng": 153.2596724,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://redlandscoastmuseum.org.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "science"
+      ]
+    },
+    {
+      "id": "attr-hotagallery",
+      "name": "HOTA Gallery",
+      "description": "The Gold Coast's public gallery at HOTA, Surfers Paradise, with exhibitions and family programs.",
+      "suburb": "Surfers Paradise",
+      "region": "Gold Coast",
+      "zone": "Gold Coast",
+      "age_min": 0,
+      "age_max": null,
+      "category": "museums",
+      "indoor": "indoor",
+      "price_aud": null,
+      "price_note": "Check official site for entry prices",
+      "duration": null,
+      "booking_url": "https://hota.com.au/",
+      "booking_required": false,
+      "lat": -28.002499,
+      "lng": 153.4163491,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://hota.com.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "craft"
+      ]
+    },
+    {
+      "id": "attr-mtq",
+      "name": "Queensland Museum Tropics",
+      "description": "Queensland Museum's Townsville site exploring the natural and cultural heritage of tropical Queensland.",
+      "suburb": "Townsville City",
+      "region": "Townsville",
+      "zone": "Queensland",
+      "age_min": 0,
+      "age_max": null,
+      "category": "museums",
+      "indoor": "indoor",
+      "price_aud": null,
+      "price_note": "Check official site for entry prices",
+      "duration": null,
+      "booking_url": "https://www.museum.qld.gov.au/tropics",
+      "booking_required": false,
+      "lat": -19.2572788,
+      "lng": 146.822303,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://www.museum.qld.gov.au/tropics"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "science"
+      ]
+    },
+    {
+      "id": "attr-ipswichart",
+      "name": "Ipswich Art Gallery",
+      "description": "Council art gallery in the Ipswich CBD with a dedicated children's gallery and kids programs.",
+      "suburb": "Ipswich",
+      "region": "Ipswich",
+      "zone": "Ipswich",
+      "age_min": 0,
+      "age_max": null,
+      "category": "museums",
+      "indoor": "indoor",
+      "price_aud": null,
+      "price_note": "Check official site for entry prices",
+      "duration": null,
+      "booking_url": "https://ipswichartgallery.qld.gov.au/",
+      "booking_required": false,
+      "lat": -27.6146595,
+      "lng": 152.7590892,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://ipswichartgallery.qld.gov.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "craft"
+      ]
+    },
+    {
+      "id": "attr-redcliffemuseum",
+      "name": "Redcliffe Museum",
+      "description": "Local history museum at Redcliffe covering the Moreton Bay region.",
+      "suburb": "Redcliffe",
+      "region": "Moreton Bay",
+      "zone": "Moreton Bay",
+      "age_min": 0,
+      "age_max": null,
+      "category": "museums",
+      "indoor": "indoor",
+      "price_aud": null,
+      "price_note": "Check official site for entry prices",
+      "duration": null,
+      "booking_url": "https://www.moretonbay.qld.gov.au/redcliffe-museum/",
+      "booking_required": false,
+      "lat": -27.2306276,
+      "lng": 153.1110319,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://www.moretonbay.qld.gov.au/redcliffe-museum/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "science"
+      ]
+    },
+    {
+      "id": "attr-fleay",
+      "name": "David Fleay Wildlife Park",
+      "description": "Queensland Parks wildlife park at Burleigh Heads with native Australian animals.",
+      "suburb": "Burleigh Heads",
+      "region": "Gold Coast",
+      "zone": "Gold Coast",
+      "age_min": 0,
+      "age_max": null,
+      "category": "animals",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Check official site for entry prices",
+      "duration": null,
+      "booking_url": "https://parks.qld.gov.au/parks/david-fleay",
+      "booking_required": false,
+      "lat": -28.109762,
+      "lng": 153.444218,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://parks.qld.gov.au/parks/david-fleay"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "animals"
+      ]
+    },
+    {
+      "id": "attr-walkabout",
+      "name": "Walkabout Creek Discovery Centre",
+      "description": "Wildlife discovery centre at Enoggera Reservoir with native Australian animals.",
+      "suburb": "Enoggera Reservoir",
+      "region": "Brisbane",
+      "zone": "West Brisbane",
+      "age_min": 0,
+      "age_max": null,
+      "category": "animals",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Check official site for entry prices",
+      "duration": null,
+      "booking_url": "https://parks.qld.gov.au/parks/walkabout-creek-discovery-centre",
+      "booking_required": false,
+      "lat": -27.4418828,
+      "lng": 152.9265203,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://parks.qld.gov.au/parks/walkabout-creek-discovery-centre"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "animals"
+      ]
+    },
+    {
+      "id": "attr-ipswichnature",
+      "name": "Ipswich Nature Centre",
+      "description": "Council nature centre at Queens Park, Ipswich with Australian animals. Check the official site for current opening status, as parts of the centre may be closed.",
+      "suburb": "Ipswich",
+      "region": "Ipswich",
+      "zone": "Ipswich",
+      "age_min": 0,
+      "age_max": null,
+      "category": "animals",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Check official site for entry prices and current opening status",
+      "duration": null,
+      "booking_url": "https://www.ipswich.qld.gov.au/Explore/Parks-and-Reserves/Parks-Search/Ipswich-Nature-Centre-Queens-Park",
+      "booking_required": false,
+      "lat": -27.6192214,
+      "lng": 152.76826409999998,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://www.ipswich.qld.gov.au/Explore/Parks-and-Reserves/Parks-Search/Ipswich-Nature-Centre-Queens-Park"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "animals"
+      ]
+    },
+    {
+      "id": "attr-ddzoo",
+      "name": "Darling Downs Zoo",
+      "description": "Zoo on the Darling Downs near Toowoomba with native and exotic animals.",
+      "suburb": "Pilton",
+      "region": "Toowoomba",
+      "zone": "Queensland",
+      "age_min": 0,
+      "age_max": null,
+      "category": "animals",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Paid entry — see official site for prices",
+      "duration": null,
+      "booking_url": "https://darlingdownszoo.com.au/",
+      "booking_required": false,
+      "lat": -27.892277,
+      "lng": 152.0200348,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://darlingdownszoo.com.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "animals"
+      ]
+    },
+    {
+      "id": "attr-rockyzoo",
+      "name": "Rockhampton Zoo",
+      "description": "Council-run zoo at Rockhampton with native and exotic animals.",
+      "suburb": "The Range",
+      "region": "Rockhampton",
+      "zone": "Queensland",
+      "age_min": 0,
+      "age_max": null,
+      "category": "animals",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Check official site for entry prices",
+      "duration": null,
+      "booking_url": "https://www.rockhamptonzoo.com.au/Home",
+      "booking_required": false,
+      "lat": -23.3978347,
+      "lng": 150.4908356,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://www.rockhamptonzoo.com.au/Home"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "animals"
+      ]
+    },
+    {
+      "id": "attr-whitewater",
+      "name": "WhiteWater World",
+      "description": "Water park at Dreamworld, Coomera, with slides, pools and family attractions.",
+      "suburb": "Coomera",
+      "region": "Gold Coast",
+      "zone": "Gold Coast",
+      "age_min": 0,
+      "age_max": null,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Paid entry — see official site for prices",
+      "duration": null,
+      "booking_url": "https://www.dreamworld.com.au/rides-attractions/whitewater-world/",
+      "booking_required": false,
+      "lat": -27.864606199999997,
+      "lng": 153.3143528,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://www.dreamworld.com.au/rides-attractions/whitewater-world/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water",
+        "theme-parks"
+      ]
+    },
+    {
+      "id": "attr-blibliaqua",
+      "name": "Bli Bli Watersports",
+      "description": "Watersports complex at Bli Bli with an inflatable aqua park, wake park and barra fishing.",
+      "suburb": "Bli Bli",
+      "region": "Sunshine Coast",
+      "zone": "Sunshine Coast",
+      "age_min": 0,
+      "age_max": null,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Aqua park sessions are paid — see official site for prices",
+      "duration": null,
+      "booking_url": "https://www.blibliwatersports.com.au/",
+      "booking_required": false,
+      "lat": -26.624210299999998,
+      "lng": 153.05026469999999,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://www.blibliwatersports.com.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water"
+      ]
+    },
+    {
+      "id": "attr-gcaqua",
+      "name": "GC Aqua Park",
+      "description": "Inflatable aqua park on the water at Southport.",
+      "suburb": "Southport",
+      "region": "Gold Coast",
+      "zone": "Gold Coast",
+      "age_min": 0,
+      "age_max": null,
+      "category": "water",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Paid entry — see official site for prices",
+      "duration": null,
+      "booking_url": "http://gcaquapark.com.au/",
+      "booking_required": false,
+      "lat": -27.96906,
+      "lng": 153.4192348,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "http://gcaquapark.com.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "water"
+      ]
+    },
+    {
+      "id": "attr-aussieworld",
+      "name": "Aussie World",
+      "description": "Theme park at Palmview on the Sunshine Coast with rides and family attractions.",
+      "suburb": "Palmview",
+      "region": "Sunshine Coast",
+      "zone": "Sunshine Coast",
+      "age_min": 0,
+      "age_max": null,
+      "category": "theme-parks",
+      "indoor": "outdoor",
+      "price_aud": null,
+      "price_note": "Paid entry — see official site for prices",
+      "duration": null,
+      "booking_url": "https://www.aussieworld.com.au/",
+      "booking_required": false,
+      "lat": -26.749752299999997,
+      "lng": 153.04643339999998,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://www.aussieworld.com.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "theme-parks"
+      ]
+    },
+    {
+      "id": "attr-qpac",
+      "name": "Queensland Performing Arts Centre",
+      "description": "Queensland's performing arts centre at South Bank with family shows, theatre and concerts.",
+      "suburb": "South Brisbane",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": null,
+      "category": "shows",
+      "indoor": "indoor",
+      "price_aud": null,
+      "price_note": "Ticket prices vary by show — see official site",
+      "duration": null,
+      "booking_url": "https://qpac.com.au/",
+      "booking_required": false,
+      "lat": -27.474275499999997,
+      "lng": 153.0193023,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://qpac.com.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "shows"
+      ]
+    },
+    {
+      "id": "attr-powerhouse",
+      "name": "Brisbane Powerhouse",
+      "description": "Contemporary arts venue at New Farm with performances, festivals and family events.",
+      "suburb": "New Farm",
+      "region": "Brisbane",
+      "zone": "Brisbane CBD & Inner",
+      "age_min": 0,
+      "age_max": null,
+      "category": "shows",
+      "indoor": "both",
+      "price_aud": null,
+      "price_note": "Ticket prices vary by event — see official site",
+      "duration": null,
+      "booking_url": "https://brisbanepowerhouse.org/",
+      "booking_required": false,
+      "lat": -27.4690169,
+      "lng": 153.0543438,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://brisbanepowerhouse.org/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "shows"
+      ]
+    },
+    {
+      "id": "attr-hota",
+      "name": "HOTA, Home of the Arts",
+      "description": "The Gold Coast's arts precinct at Surfers Paradise with theatre, an outdoor stage and events.",
+      "suburb": "Surfers Paradise",
+      "region": "Gold Coast",
+      "zone": "Gold Coast",
+      "age_min": 0,
+      "age_max": null,
+      "category": "shows",
+      "indoor": "both",
+      "price_aud": null,
+      "price_note": "Ticket prices vary by event — see official site",
+      "duration": null,
+      "booking_url": "https://hota.com.au/",
+      "booking_required": false,
+      "lat": -28.0014535,
+      "lng": 153.41625919999998,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "https://hota.com.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "shows"
+      ]
+    },
+    {
+      "id": "attr-butterfactory",
+      "name": "Kingston Butter Factory Cultural Precinct",
+      "description": "Cultural precinct at Kingston with live music, performances and community events.",
+      "suburb": "Kingston",
+      "region": "Logan",
+      "zone": "Logan",
+      "age_min": 0,
+      "age_max": null,
+      "category": "shows",
+      "indoor": "both",
+      "price_aud": null,
+      "price_note": "Ticket prices vary by event — see official site",
+      "duration": null,
+      "booking_url": "http://www.loganarts.com.au/",
+      "booking_required": false,
+      "lat": -27.6580263,
+      "lng": 153.12043309999999,
+      "source": {
+        "label": "Google Places — verified Sep 2026",
+        "url": "http://www.loganarts.com.au/"
+      },
+      "live": true,
+      "holiday_only": false,
+      "interests": [
+        "shows"
       ]
     }
   ]

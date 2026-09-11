@@ -1,6 +1,6 @@
 {
   "_note": "Human review queue. Promote by hand into data/activities.json; never auto-publish.",
-  "generatedAt": "2026-09-10T16:06:36",
+  "generatedAt": "2026-09-11T17:01:26",
   "sources": {
     "trumba": {
       "status": "ok",
@@ -28,6 +28,26 @@
       "window_days": 21,
       "query": "kids family children",
       "ran_at": "2026-09-10T16:06:36"
+    },
+    "urbanlist": {
+      "status": "ok",
+      "candidates": 3,
+      "sitemap_pages": 2,
+      "window_days": 90,
+      "ran_at": "2026-09-11T16:59:43"
+    },
+    "weekendnotes": {
+      "status": "ok",
+      "candidates": 40,
+      "category_pages": 4,
+      "ran_at": "2026-09-11T17:01:26"
+    },
+    "ticketmaster": {
+      "status": "ok",
+      "candidates": 0,
+      "api_calls": 6,
+      "unique_events": 90,
+      "ran_at": "2026-09-11T16:59:36"
     }
   },
   "candidates": [
@@ -12909,6 +12929,1210 @@
       "source": {
         "label": "Eventbrite",
         "url": "https://www.eventbrite.com.au/e/nsw-governments-come-fish-with-us-workshop-for-juniors-ballina-nsw-tickets-1997413005067"
+      }
+    },
+    {
+      "id": "cand-ul-family-friendly-pubs-brisbane",
+      "origin": "urbanlist",
+      "status": "proposed",
+      "title": "Family friendly pubs brisbane",
+      "description": "Family guide article — open the link and verify each venue individually before promoting.",
+      "when": "Guide updated 2026-09-06",
+      "date": "2026-09-06",
+      "venue": null,
+      "url": "https://www.theurbanlist.com/brisbane/a-list/family-friendly-pubs-brisbane",
+      "category_hint": "urban-list family guide (venue lead)",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check guide — family article, verify per venue",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "The Urban List",
+        "url": "https://www.theurbanlist.com/brisbane/a-list/family-friendly-pubs-brisbane"
+      }
+    },
+    {
+      "id": "cand-ul-brisbane-babylon-nights",
+      "origin": "urbanlist",
+      "status": "proposed",
+      "title": "Brisbane babylon nights",
+      "description": "Family guide article — open the link and verify each venue individually before promoting.",
+      "when": "Guide updated 2026-07-16",
+      "date": "2026-07-16",
+      "venue": null,
+      "url": "https://www.theurbanlist.com/brisbane/a-list/brisbane-babylon-nights",
+      "category_hint": "urban-list family guide (venue lead)",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check guide — family article, verify per venue",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "The Urban List",
+        "url": "https://www.theurbanlist.com/brisbane/a-list/brisbane-babylon-nights"
+      }
+    },
+    {
+      "id": "cand-ul-family-friendly-airbnbs-brisbane",
+      "origin": "urbanlist",
+      "status": "proposed",
+      "title": "Family friendly airbnbs brisbane",
+      "description": "Family guide article — open the link and verify each venue individually before promoting.",
+      "when": "Guide updated 2026-06-19",
+      "date": "2026-06-19",
+      "venue": null,
+      "url": "https://www.theurbanlist.com/brisbane/a-list/family-friendly-airbnbs-brisbane",
+      "category_hint": "urban-list family guide (venue lead)",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check guide — family article, verify per venue",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "The Urban List",
+        "url": "https://www.theurbanlist.com/brisbane/a-list/family-friendly-airbnbs-brisbane"
+      }
+    },
+    {
+      "id": "cand-wn-tiny-humans-dancing-under-the-sea-party",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Tiny Humans Dancing - Under the Sea Party",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": "DATE AND TIME: Saturday 26th September, 11",
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/tiny-humans-dancing-under-the-sea-party/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/tiny-humans-dancing-under-the-sea-party/"
+      }
+    },
+    {
+      "id": "cand-wn-plantapalooza",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Plantapalooza",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/plantapalooza/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/plantapalooza/"
+      }
+    },
+    {
+      "id": "cand-wn-whats-on-brisbane-markets-this-weekend-335528",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "What's On: Brisbane Markets This Weekend",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": "When: Friday 11 September, 4 pm–9 pm Cost: Free entry What to expect: 100",
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/whats-on-brisbane-markets-this-weekend-335528/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/whats-on-brisbane-markets-this-weekend-335528/"
+      }
+    },
+    {
+      "id": "cand-wn-tamborine-mountain-scarecrow-festival-2026",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Tamborine Mountain Scarecrow Festival 2026",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/tamborine-mountain-scarecrow-festival-2026/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/tamborine-mountain-scarecrow-festival-2026/"
+      }
+    },
+    {
+      "id": "cand-wn-spring-school-holidays-at-landsborough-museum-free-events",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Spring School Holidays at Landsborough Museum - FREE Events",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": "DATES AND TIMES: Thursday 24th September, 10",
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/spring-school-holidays-at-landsborough-museum-free-events/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/spring-school-holidays-at-landsborough-museum-free-events/"
+      }
+    },
+    {
+      "id": "cand-wn-wondai-garden-expo-spring-2026",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Wondai Garden Expo Spring 2026",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/wondai-garden-expo-spring-2026/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/wondai-garden-expo-spring-2026/"
+      }
+    },
+    {
+      "id": "cand-wn-bribie-island-christmas-lights-boat-parade",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Bribie Island Christmas Lights Boat Parade",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/bribie-island-christmas-lights-boat-parade/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/bribie-island-christmas-lights-boat-parade/"
+      }
+    },
+    {
+      "id": "cand-wn-la-scala-the-force-of-destiny-st-ali-italian-film-festival-2026-film-review",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "La Scala: The Force of Destiny (ST. ALi Italian Film Festival 2026) - Film Review",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/la-scala-the-force-of-destiny-st-ali-italian-film-festival-2026-film-review/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/la-scala-the-force-of-destiny-st-ali-italian-film-festival-2026-film-review/"
+      }
+    },
+    {
+      "id": "cand-wn-life-is-life-st-ali-italian-film-festival-2026-film-review",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Life is Life  (St. Ali Italian Film Festival 2026) - Film Review",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/life-is-life-st-ali-italian-film-festival-2026-film-review/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/life-is-life-st-ali-italian-film-festival-2026-film-review/"
+      }
+    },
+    {
+      "id": "cand-wn-classmates-st-ali-italian-film-festival-2026-film-review",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Classmates (St. Ali Italian Film Festival 2026) - Film Review",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/classmates-st-ali-italian-film-festival-2026-film-review/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/classmates-st-ali-italian-film-festival-2026-film-review/"
+      }
+    },
+    {
+      "id": "cand-wn-mt-cotton-organic-fruit-veg",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Mt Cotton Organic Fruit & Veg",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/mt-cotton-organic-fruit-veg/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/mt-cotton-organic-fruit-veg/"
+      }
+    },
+    {
+      "id": "cand-wn-art-with-altitude-annual-art-exhibition",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Art with Altitude - Annual Art Exhibition",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/art-with-altitude-annual-art-exhibition/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/art-with-altitude-annual-art-exhibition/"
+      }
+    },
+    {
+      "id": "cand-wn-whats-on-brisbane-queensland-this-spring-2026-events-festivals-things-to-do",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "What's On Brisbane, Queensland This Spring 2026 - Events, Festivals & Things to Do",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": "Date: Saturday 5 September 2026 Location: Brisbane River and surrounding",
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/whats-on-brisbane-queensland-this-spring-2026-events-festivals-things-to-do/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/whats-on-brisbane-queensland-this-spring-2026-events-festivals-things-to-do/"
+      }
+    },
+    {
+      "id": "cand-wn-brisbanes-big-italian-party-is-back-festitalia-returns-this-september",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Brisbane's Big Italian Party Is Back: Festitalia Returns This September",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": "When: Sunday 20 September 2026 Tickets: On sale now at www",
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/brisbanes-big-italian-party-is-back-festitalia-returns-this-september/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/brisbanes-big-italian-party-is-back-festitalia-returns-this-september/"
+      }
+    },
+    {
+      "id": "cand-wn-whats-on-brisbane-markets-this-weekend",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "What's On: Brisbane Markets This Weekend",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": "When: Friday 4 September, 5 pm–9 pm Weather: The market operates in varyi",
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/whats-on-brisbane-markets-this-weekend/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/whats-on-brisbane-markets-this-weekend/"
+      }
+    },
+    {
+      "id": "cand-wn-the-wisdom-within-a-course-for-exploring-lifes-big-questions",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "The Wisdom Within: A Course for Exploring Life's Big Questions",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/the-wisdom-within-a-course-for-exploring-lifes-big-questions/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/the-wisdom-within-a-course-for-exploring-lifes-big-questions/"
+      }
+    },
+    {
+      "id": "cand-wn-springtime-on-the-mountain-discover-tamborines-secret-gardens",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Springtime on the Mountain: Discover Tamborine's Secret Gardens",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/springtime-on-the-mountain-discover-tamborines-secret-gardens/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/springtime-on-the-mountain-discover-tamborines-secret-gardens/"
+      }
+    },
+    {
+      "id": "cand-wn-wildly-enchanting-queensland-wildlife-artists-annual-exhibition-returns-to-brisb",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Wildly Enchanting: Queensland Wildlife Artists' Annual Exhibition Returns to Brisbane Botanic Gardens",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/wildly-enchanting-queensland-wildlife-artists-annual-exhibition-returns-to-brisbane-botanic-gardens/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/wildly-enchanting-queensland-wildlife-artists-annual-exhibition-returns-to-brisbane-botanic-gardens/"
+      }
+    },
+    {
+      "id": "cand-wn-urban-cocktail-trail-brisbane-qld-335225",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Urban Cocktail Trail | Brisbane (QLD)",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/urban-cocktail-trail-brisbane-qld-335225/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/urban-cocktail-trail-brisbane-qld-335225/"
+      }
+    },
+    {
+      "id": "cand-wn-make-believe-magic-the-worlds-of-the-jim-henson-company-331233",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Make, Believe, Magic: The Worlds of The Jim Henson Company",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/make-believe-magic-the-worlds-of-the-jim-henson-company-331233/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/make-believe-magic-the-worlds-of-the-jim-henson-company-331233/"
+      }
+    },
+    {
+      "id": "cand-wn-are-you-lonesome-tonight-opera-queensland",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Are You Lonesome Tonight - Opera Queensland",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/are-you-lonesome-tonight-opera-queensland/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/are-you-lonesome-tonight-opera-queensland/"
+      }
+    },
+    {
+      "id": "cand-wn-the-scramble-metro-arts",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "The Scramble - Metro Arts",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/the-scramble-metro-arts/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/the-scramble-metro-arts/"
+      }
+    },
+    {
+      "id": "cand-wn-fijian-flying-circus-brisbane-festival",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Fijian Flying Circus - Brisbane Festival",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/fijian-flying-circus-brisbane-festival/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/fijian-flying-circus-brisbane-festival/"
+      }
+    },
+    {
+      "id": "cand-wn-brisbane-festival-2026",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Brisbane Festival 2026",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/brisbane-festival-2026/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/brisbane-festival-2026/"
+      }
+    },
+    {
+      "id": "cand-wn-brisbane-portrait-prize-finalists-exhibition-2026",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Brisbane Portrait Prize Finalists Exhibition 2026",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/brisbane-portrait-prize-finalists-exhibition-2026/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/brisbane-portrait-prize-finalists-exhibition-2026/"
+      }
+    },
+    {
+      "id": "cand-wn-meet-the-rainforest-guided-walks-in-september",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Meet the Rainforest Guided Walks in September",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": "Dates and times: Saturday 19th September, 1",
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/meet-the-rainforest-guided-walks-in-september/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/meet-the-rainforest-guided-walks-in-september/"
+      }
+    },
+    {
+      "id": "cand-wn-secret-garden-in-september-334119",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Secret Garden in September",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": "DATE AND TIMES: Sunday 20th September 2",
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/secret-garden-in-september-334119/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/secret-garden-in-september-334119/"
+      }
+    },
+    {
+      "id": "cand-wn-koreaboo-at-la-boite-theatre",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Koreaboo at La Boite Theatre",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/koreaboo-at-la-boite-theatre/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/koreaboo-at-la-boite-theatre/"
+      }
+    },
+    {
+      "id": "cand-wn-gathering-nana-magics-deadly-adventures-335612",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Gathering: Nana Magic's Deadly Adventures",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/gathering-nana-magics-deadly-adventures-335612/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/gathering-nana-magics-deadly-adventures-335612/"
+      }
+    },
+    {
+      "id": "cand-wn-spring-bird-survey-at-mary-cairncross-scenic-reserve-free-event",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Spring Bird Survey at Mary Cairncross Scenic Reserve - FREE Event",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": "Date and times: Friday 25th September, 7",
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/spring-bird-survey-at-mary-cairncross-scenic-reserve-free-event/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/spring-bird-survey-at-mary-cairncross-scenic-reserve-free-event/"
+      }
+    },
+    {
+      "id": "cand-wn-introduction-to-latin-dancing",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Introduction to Latin Dancing",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/introduction-to-latin-dancing/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/introduction-to-latin-dancing/"
+      }
+    },
+    {
+      "id": "cand-wn-cosy-up-this-winter-modern-felting-classes-at-the-fabric-and-felt-studio",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Cosy Up This Winter: Modern Felting Classes at The Fabric and Felt Studio",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/cosy-up-this-winter-modern-felting-classes-at-the-fabric-and-felt-studio/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/cosy-up-this-winter-modern-felting-classes-at-the-fabric-and-felt-studio/"
+      }
+    },
+    {
+      "id": "cand-wn-rockwiz-rocks-brisbane",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "RocKwiz Rocks Brisbane",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/rockwiz-rocks-brisbane/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/rockwiz-rocks-brisbane/"
+      }
+    },
+    {
+      "id": "cand-wn-mac-fair-2026-335223",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Mac Fair 2026",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/mac-fair-2026-335223/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/mac-fair-2026-335223/"
+      }
+    },
+    {
+      "id": "cand-wn-bush-kindy-kirra-and-coco-335226",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Bush Kindy - Kirra and Coco",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/bush-kindy-kirra-and-coco-335226/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/bush-kindy-kirra-and-coco-335226/"
+      }
+    },
+    {
+      "id": "cand-wn-crafty-party-at-museum-of-brisbane",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Crafty Party at Museum of Brisbane",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/crafty-party-at-museum-of-brisbane/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/crafty-party-at-museum-of-brisbane/"
+      }
+    },
+    {
+      "id": "cand-wn-rspca-cupcake-day-335366",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "RSPCA Cupcake Day",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/rspca-cupcake-day-335366/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/rspca-cupcake-day-335366/"
+      }
+    },
+    {
+      "id": "cand-wn-toowoomba-carnival-of-flowers-2026-332644",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Toowoomba Carnival of Flowers 2026",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/toowoomba-carnival-of-flowers-2026-332644/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/toowoomba-carnival-of-flowers-2026-332644/"
+      }
+    },
+    {
+      "id": "cand-wn-spring-school-holidays-at-bankfoot-house",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "Spring School Holidays at Bankfoot House",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/spring-school-holidays-at-bankfoot-house/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/spring-school-holidays-at-bankfoot-house/"
+      }
+    },
+    {
+      "id": "cand-wn-the-choir-of-man-329978",
+      "origin": "weekendnotes",
+      "status": "proposed",
+      "title": "The Choir of Man",
+      "description": "Community event write-up — open the article and verify date, venue and details before promoting.",
+      "when": null,
+      "date": null,
+      "venue": null,
+      "url": "https://www.weekendnotes.com/the-choir-of-man-329978/",
+      "category_hint": "weekendnotes community write-up",
+      "price_note": null,
+      "booking_url": null,
+      "booking_required": null,
+      "age_min": null,
+      "age_max": null,
+      "age_hint": "Check article — family section, verify per event",
+      "travel": {
+        "lat": null,
+        "lng": null,
+        "zone": null,
+        "region": "Brisbane"
+      },
+      "source": {
+        "label": "WeekendNotes Brisbane",
+        "url": "https://www.weekendnotes.com/the-choir-of-man-329978/"
       }
     }
   ]
