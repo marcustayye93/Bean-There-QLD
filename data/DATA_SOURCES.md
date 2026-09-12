@@ -190,3 +190,13 @@ and flags that in the output.
 - **Verification:** 15 Trumba events cross-checked against a fresh BCC OpenDataSoft CSV pull (2026-09-12); 10 Eventbrite pages fetched with a browser UA (all `EventScheduled`, no cancelled/sold-out markers; canonical ticket URLs used where pages had redirected). Eventbrite venues carry no coords — all 10 geocoded via Google Places (all OPERATIONAL). Prices: 13 feed-confirmed free, 2 planetarium shows $11, 10 left `null` with "see official listing" copy — nothing invented.
 - **App support:** "Happening soon" rail on the Find view (top 12 upcoming, date-sorted, respects travel bucket, hidden while searching); event cards show date labels (Today / Tomorrow / "On now – …"); expired events auto-vanish from results via `isEventLive`; event titles link to the event page; new `Pop-ups & events` category chip (first in the list).
 - **Known limits:** SEQ-heavy (13/25 Brisbane CBD & Inner) — regional pop-ups barely exist in the current candidate pool; WeekendNotes/Urban List adapters produced zero future-dated candidates this run; 10 events have unpublished prices (`null`); planetarium shows are recurring with unknown end dates (`date_end: null` → treated as ongoing).
+
+## Event photo packs (2026-09-12)
+Decorative card photos for the `events` category are keyword-matched packs in
+`js/app.js` (`EVENT_PHOTOS` + `EVENT_KEYWORDS`), not per-venue photos. 10 packs
+(cinema, truck, space, water, wheels, lights, nature, fair, art, festival),
+2-3 images each, 23 total. Every image was individually downloaded and visually
+verified on 2026-09-12; all returned HTTP 200 with a foreign Referer. Picks are
+deterministic per activity id (stable cards, varied category). Non-Unsplash
+hosts are hotlinked raw: monsterblog.lzsportsource.com, ehcanadatravel.com,
+hilltromper.com, sites.lafayette.edu, iswi.org.

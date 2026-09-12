@@ -96,18 +96,91 @@ const CATEGORY_PHOTOS = {
   shows: [
     U + 'photo-1507924538820-ede94a04019d' + Q, // theatre stage
     U + 'photo-1514306191717-452ec28c7814' + Q  // concert crowd
-  ],
-  events: [
-    U + 'photo-1514306191717-452ec28c7814' + Q, // concert crowd
-    U + 'photo-1507924538820-ede94a04019d' + Q, // theatre stage
-    U + 'photo-1533174072545-7a4b6ad7a6c3' + Q  // festival crowd
   ]
 };
+
+/* Event photo packs, matched by keyword so each pop-up gets a photo that
+ * actually matches what it is. Every URL below was individually downloaded
+ * and eyeballed on 2026-09-12 — no blind guessing. Each pack holds 2-3
+ * images; photoFor() picks deterministically per activity id, so cards stay
+ * stable across renders while the category doesn't look like one static image.
+ * Non-Unsplash URLs are used raw (no imgix params); all served HTTP 200 with
+ * a foreign Referer when verified. */
+const EVENT_PHOTOS = {
+  cinema: [
+    U + 'photo-1489599849927-2ee91cede3ba' + Q, // cinema seats
+    U + 'photo-1478720568477-152d9b164e26' + Q  // film projector
+  ],
+  truck: [
+    'https://monsterblog.lzsportsource.com/images/coverages/phoenixmj07/pastranafs5.jpg', // monster truck mid-jump
+    'https://monsterblog.lzsportsource.com/images/coverages/vegasemtn07/sun_wheelie5.jpg'  // monster truck wheelie
+  ],
+  space: [
+    U + 'photo-1419242902214-272b3f66ee7a' + Q, // milky way
+    U + 'photo-1444703686981-a3abbc4d4fe3' + Q  // person under starry sky
+  ],
+  water: [
+    'https://www.ehcanadatravel.com/images/attractions/kayaking-canada.jpg', // kayaker on a lake
+    U + 'photo-1476514525535-07fb3b4ae5f1' + Q  // rowboat on mountain lake
+  ],
+  wheels: [
+    U + 'photo-1501147830916-ce44a6359892' + Q, // person riding bike
+    U + 'photo-1485965120184-e220f721d03e' + Q, // bicycle
+    'https://hilltromper.com/sites/default/files/field/image/boy-at-a-pump-track.jpg' // kid on bike at pump track
+  ],
+  lights: [
+    'https://sites.lafayette.edu/isa/files/2014/10/Diwali-Diyas.jpg', // diwali diyas
+    'https://iswi.org/wp-content/uploads/fairy-lights-mittel.jpg'     // fairy lights bokeh
+  ],
+  nature: [
+    U + 'photo-1441974231531-c6227db76b6e' + Q, // forest path
+    U + 'photo-1448375240586-882707db888b' + Q  // misty forest
+  ],
+  fair: [
+    U + 'photo-1530103862676-de8c9debad1d' + Q, // balloons
+    U + 'photo-1492684223066-81342ee5ff30' + Q  // confetti crowd
+  ],
+  art: [
+    U + 'photo-1554907984-15263bfd63bd' + Q, // gallery wall
+    U + 'photo-1515405295579-ba7b45403062' + Q, // abstract painting
+    U + 'photo-1566127444979-b3d2b654e3d7' + Q  // museum building
+  ],
+  festival: [
+    U + 'photo-1533174072545-7a4b6ad7a6c3' + Q, // festival crowd confetti
+    U + 'photo-1501281668745-f7f57925c3b4' + Q, // concert crowd phones
+    U + 'photo-1470229722913-7c0e2dbbafd3' + Q  // stage lights crowd
+  ]
+};
+/* Ordered keyword -> pack mapping. First match wins, so specific phrases
+ * ("monster truck") come before generic ones ("fair"). Matched against the
+ * activity's name + description + venue, lowercased. */
+const EVENT_KEYWORDS = [
+  [['cinema', 'movie', 'film'], 'cinema'],
+  [['monster truck', 'monster machine'], 'truck'],
+  [['moon', 'mars', 'planet', 'astronom', 'telescope', 'planetarium'], 'space'],
+  [['kayak', 'sail', 'paddl'], 'water'],
+  [['wheely', 'bike', 'cycl', 'scooter', 'pump track'], 'wheels'],
+  [['diwali', 'janmashtami', 'deepavali'], 'lights'],
+  [['forest', 'bush', 'nature'], 'nature'],
+  [['fair', 'carnival', 'inflatable', 'jump'], 'fair'],
+  [['art', 'sculpt', 'exhibition', 'gallery', 'museum', 'prize', 'tower', 'sensory'], 'art']
+];
+function eventPackFor(a) {
+  const hay = ((a.name || '') + ' ' + (a.description || '') + ' ' + (a.venue || '')).toLowerCase();
+  for (const [words, pack] of EVENT_KEYWORDS) {
+    if (words.some(w => hay.includes(w))) return pack;
+  }
+  return 'festival';
+}
 const HERO_PHOTO = 'https://live.staticflickr.com/42/112080998_d47077d191_b.jpg'; // Surfers Paradise, Gold Coast (CC BY-SA)
 
-/* Deterministic photo pick per activity so cards are stable across renders. */
+/* Deterministic photo pick per activity so cards are stable across renders.
+ * Events get a keyword-matched pack (cinema -> cinema seats, moon -> night
+ * sky, etc.) instead of one generic pack for the whole category. */
 function photoFor(a) {
-  const pack = CATEGORY_PHOTOS[a.category] || CATEGORY_PHOTOS.playgrounds;
+  let pack;
+  if (a.category === 'events') pack = EVENT_PHOTOS[eventPackFor(a)] || EVENT_PHOTOS.festival;
+  else pack = CATEGORY_PHOTOS[a.category] || CATEGORY_PHOTOS.playgrounds;
   const s = String((a && a.id) || '');
   let h = 0;
   for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
