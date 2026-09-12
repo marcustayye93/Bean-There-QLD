@@ -13,6 +13,7 @@ const DAY_NAMES = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 const CATEGORIES = [
+  ['events', 'Pop-ups & events'],
   ['soccer', 'Soccer'],
   ['basketball', 'Basketball'],
   ['craft', 'Craft'],
@@ -95,6 +96,11 @@ const CATEGORY_PHOTOS = {
   shows: [
     U + 'photo-1507924538820-ede94a04019d' + Q, // theatre stage
     U + 'photo-1514306191717-452ec28c7814' + Q  // concert crowd
+  ],
+  events: [
+    U + 'photo-1514306191717-452ec28c7814' + Q, // concert crowd
+    U + 'photo-1507924538820-ede94a04019d' + Q, // theatre stage
+    U + 'photo-1533174072545-7a4b6ad7a6c3' + Q  // festival crowd
   ]
 };
 const HERO_PHOTO = 'https://live.staticflickr.com/42/112080998_d47077d191_b.jpg'; // Surfers Paradise, Gold Coast (CC BY-SA)
@@ -149,6 +155,62 @@ function fmtDayYear(d) {
 function isoDay(d) {
   const p = n => String(n).padStart(2, '0');
   return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate());
+}
+
+/* ---- time-bound pop-up events ---- */
+
+function eventStart(a) {
+  return a && a.is_event ? parseDay(a.date_start) : null;
+}
+
+function eventEnd(a) {
+  if (!a || !a.is_event) return null;
+  return parseDay(a.date_end) || parseDay(a.date_start);
+}
+
+// An event is current if its last day hasn't passed. Recurring events with
+// no known end date are treated as ongoing.
+function isEventLive(a, today) {
+  if (!a || !a.is_event) return true;
+  const t = startOfDay(today || new Date());
+  const end = eventEnd(a);
+  if (!end) return true;
+  return startOfDay(end) >= t;
+}
+
+function eventDateLabel(a, today) {
+  if (!a || !a.is_event) return '';
+  const t = startOfDay(today || new Date());
+  const s = parseDay(a.date_start);
+  if (!s) return '';
+  const e = parseDay(a.date_end);
+  const ds = startOfDay(s);
+  if (e && startOfDay(e) > ds) {
+    const endLabel = e.getFullYear() !== s.getFullYear() ? fmtDayYear(e) : fmtDay(e);
+    if (ds <= t) return 'On now – ' + endLabel;
+    return fmtDay(s) + ' – ' + endLabel;
+  }
+  const n = daysBetween(t, ds);
+  if (n <= 0) return e ? 'Today' : 'On now';
+  if (n === 1) return 'Tomorrow';
+  return fmtDay(s);
+}
+
+// Upcoming pop-ups for the "Happening soon" rail. f: { loc, bucketMin, today }
+function upcomingEvents(list, f) {
+  const t = startOfDay(f.today || new Date());
+  return list.filter(a => {
+    if (!a.is_event || a.live === false) return false;
+    if (!isEventLive(a, t)) return false;
+    if (f.loc && f.bucketMin !== Infinity) {
+      const m = activityDrive(a, f.loc);
+      if (m == null || m > f.bucketMin) return false;
+    }
+    return true;
+  }).sort((x, y) =>
+    String(x.date_start || '').localeCompare(String(y.date_start || '')) ||
+    String(x.name).localeCompare(String(y.name))
+  ).slice(0, 12);
 }
 
 function haversineKm(lat1, lon1, lat2, lon2) {
@@ -297,7 +359,9 @@ function bannerText(st) {
 
 function filterActivities(list, f) {
   const q = (f.q || '').trim().toLowerCase();
+  const today = f.today || new Date();
   const out = list.filter(a => {
+    if (a.is_event && !isEventLive(a, today)) return false; // expired pop-ups vanish
     if (f.category && a.category !== f.category) return false;
     if (f.freeOnly && a.price_aud !== 0) return false;
     if (q) {
@@ -409,7 +473,8 @@ if (typeof module !== 'undefined' && module.exports) {
     suitsAge, ageRangeLabel, ageBounds, priceLabel, categoryLabel, indoorLabel,
     bucketMinutes, bucketLabel, activityDrive,
     holidayPeriods, holidayStatus, lengthLabel, bannerText,
-    filterActivities, recommended, encodePlan, decodePlan, blockDays, planText,
+    filterActivities, recommended, upcomingEvents, isEventLive, eventDateLabel,
+    eventStart, eventEnd, encodePlan, decodePlan, blockDays, planText,
     CATEGORIES, INTERESTS, CATEGORY_PHOTOS, HERO_PHOTO, photoFor
   };
 }
@@ -532,6 +597,7 @@ function renderAll() {
       '<button type="button" class="btn" data-action="retry-load">Try again</button></div>';
     $('results-count').textContent = '';
     $('recommended').hidden = true;
+    $('happening').hidden = true;
     return;
   }
   renderBanner();
@@ -630,7 +696,7 @@ function currentFilterArgs() {
     c1Interests: settings.child1.interests, c2Interests: settings.child2.interests,
     category: filters.category, freeOnly: filters.freeOnly, q: filters.q,
     bucketMin: bucketMinutes(filters.bucket), loc: postcodeLoc,
-    sort: filters.sort, forHolidays: filters.forHolidays
+    sort: filters.sort, forHolidays: filters.forHolidays, today: new Date()
   };
 }
 
@@ -649,12 +715,17 @@ function cardHTML(a, opts) {
   const fav = favourites.includes(a.id);
   const badges = [];
   if (a.live === false) badges.push('<span class="badge badge-sample">Sample listing</span>');
+  if (a.is_event) badges.push('<span class="badge badge-event">Pop-up</span>');
   if (a.holiday_only) badges.push('<span class="badge badge-holiday">School holidays only</span>');
   if (a.booking_required) badges.push('<span class="badge badge-booking">Booking required</span>');
 
   const meta = [];
   const where = [a.suburb, a.region].filter(Boolean).join(' · ');
   if (where) meta.push('<li><span class="k">📍</span> ' + esc(where) + '</li>');
+  if (a.is_event) {
+    const dl = eventDateLabel(a, new Date());
+    if (dl) meta.push('<li><span class="k">📅</span> <strong>' + esc(dl) + '</strong></li>');
+  }
   meta.push('<li><span class="k">👶</span> ' + esc(ageRangeLabel(a)) + '</li>');
   if (a.category) meta.push('<li><span class="k">🏷️</span> ' + esc(categoryLabel(a.category)) + '</li>');
   const indoor = indoorLabel(a.indoor);
@@ -675,7 +746,9 @@ function cardHTML(a, opts) {
 
   return '<article class="card">' +
     '<img class="card-img" src="' + esc(photoFor(a)) + '" alt="" loading="lazy">' +
-    '<div class="card-top"><h3>' + esc(a.name) + '</h3>' +
+    '<div class="card-top"><h3>' + (a.is_event && a.url
+      ? '<a class="card-link" href="' + esc(a.url) + '" target="_blank" rel="noopener">' + esc(a.name) + '</a>'
+      : esc(a.name)) + '</h3>' +
     '<button type="button" class="heart" data-action="toggle-fav" data-id="' + esc(a.id) +
     '" aria-pressed="' + (fav ? 'true' : 'false') +
     '" aria-label="' + (fav ? 'Remove from favourites' : 'Save to favourites') + '">' +
@@ -706,6 +779,27 @@ function recoCardHTML(a) {
     '" aria-label="' + (fav ? 'Remove from favourites' : 'Save to favourites') + '">' +
     (fav ? '♥' : '♡') + '</button>' +
     (url ? '<a class="reco-link" href="' + esc(url) + '" target="_blank" rel="noopener">' + title + '</a>' : title) +
+    '<p class="reco-meta">' + esc([a.suburb, priceLabel(a)].filter(Boolean).join(' · ')) + '</p>' +
+    (mins != null ? '<p class="reco-meta">' + esc(driveLabel(mins)) + '</p>' : '') +
+    (a.live === false ? '<p class="reco-meta">Sample listing</p>' : '') +
+    '</div>';
+}
+
+function eventCardHTML(a) {
+  const fav = favourites.includes(a.id);
+  const mins = postcodeLoc ? activityDrive(a, postcodeLoc) : null;
+  const dl = eventDateLabel(a, new Date());
+  const url = a.url || a.booking_url || (a.source && a.source.url) || null;
+  const img = '<img class="reco-img" src="' + esc(photoFor(a)) + '" alt="" loading="lazy">';
+  const title = '<h3>' + esc(a.name) + '</h3>';
+  return '<div class="reco-card">' +
+    (url ? '<a class="reco-link" href="' + esc(url) + '" target="_blank" rel="noopener" aria-label="' + esc(a.name) + '">' + img + '</a>' : img) +
+    '<button type="button" class="heart" data-action="toggle-fav" data-id="' + esc(a.id) +
+    '" aria-pressed="' + (fav ? 'true' : 'false') +
+    '" aria-label="' + (fav ? 'Remove from favourites' : 'Save to favourites') + '">' +
+    (fav ? '♥' : '♡') + '</button>' +
+    (url ? '<a class="reco-link" href="' + esc(url) + '" target="_blank" rel="noopener">' + title + '</a>' : title) +
+    (dl ? '<p class="reco-meta"><strong>' + esc(dl) + '</strong></p>' : '') +
     '<p class="reco-meta">' + esc([a.suburb, priceLabel(a)].filter(Boolean).join(' · ')) + '</p>' +
     (mins != null ? '<p class="reco-meta">' + esc(driveLabel(mins)) + '</p>' : '') +
     (a.live === false ? '<p class="reco-meta">Sample listing</p>' : '') +
@@ -751,6 +845,18 @@ function renderResults() {
   const list = filterActivities(activities, f);
 
   $('results-count').textContent = resultsCountHTML(list.length, activities.length);
+
+  // Happening soon rail: upcoming pop-up events, hidden while searching.
+  const hapBox = $('happening');
+  const upcoming = f.q ? [] : upcomingEvents(activities, {
+    loc: postcodeLoc, bucketMin: bucketMinutes(filters.bucket), today: f.today
+  });
+  if (upcoming.length) {
+    hapBox.hidden = false;
+    $('happening-row').innerHTML = upcoming.map(eventCardHTML).join('');
+  } else {
+    hapBox.hidden = true;
+  }
 
   // Recommended row: both children's interests, within the travel bucket.
   const recoBox = $('recommended');

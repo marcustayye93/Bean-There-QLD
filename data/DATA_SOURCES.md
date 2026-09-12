@@ -182,3 +182,11 @@ Keyless, standard library only. Live sources (ICS, BCC CSVs) are fetched on
 every run; samples and 2027 holiday windows are baked from verified sources;
 if the ICS feed is unreachable the script falls back to the baked 2026 windows
 and flags that in the output.
+
+## Events batch 1 — time-bound pop-ups (2026-09-12, pending push approval)
+
+- **Why:** permanent venues (pools, zoos) are table stakes locals already know; time-bound pop-ups are the retention driver. New `events` category + `is_event` flag + `date_start`/`date_end`.
+- **Curation:** 503 candidates → 199 past-dated dropped → 304 future-dated reviewed → 25 kept, 279 dropped (adult fitness 76, weak-fit workshops 162, civic 14, parenting/religious 13, adult-oriented 6, outside QLD 4, term classes 3, cancelled 1, pet 1). Full funnel in `scripts/events-batch-1-REPORT.md`; raw batch in `scripts/events-batch-1.json`.
+- **Verification:** 15 Trumba events cross-checked against a fresh BCC OpenDataSoft CSV pull (2026-09-12); 10 Eventbrite pages fetched with a browser UA (all `EventScheduled`, no cancelled/sold-out markers; canonical ticket URLs used where pages had redirected). Eventbrite venues carry no coords — all 10 geocoded via Google Places (all OPERATIONAL). Prices: 13 feed-confirmed free, 2 planetarium shows $11, 10 left `null` with "see official listing" copy — nothing invented.
+- **App support:** "Happening soon" rail on the Find view (top 12 upcoming, date-sorted, respects travel bucket, hidden while searching); event cards show date labels (Today / Tomorrow / "On now – …"); expired events auto-vanish from results via `isEventLive`; event titles link to the event page; new `Pop-ups & events` category chip (first in the list).
+- **Known limits:** SEQ-heavy (13/25 Brisbane CBD & Inner) — regional pop-ups barely exist in the current candidate pool; WeekendNotes/Urban List adapters produced zero future-dated candidates this run; 10 events have unpublished prices (`null`); planetarium shows are recurring with unknown end dates (`date_end: null` → treated as ongoing).
