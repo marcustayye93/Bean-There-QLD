@@ -158,10 +158,10 @@ const EVENT_KEYWORDS = [
   [['cinema', 'movie', 'film'], 'cinema'],
   [['monster truck', 'monster machine'], 'truck'],
   [['moon', 'mars', 'planet', 'astronom', 'telescope', 'planetarium'], 'space'],
-  [['kayak', 'sail', 'paddl'], 'water'],
+  [['kayak', 'sail', 'paddl', 'whale', 'marine', 'turtle'], 'water'],
   [['wheely', 'bike', 'cycl', 'scooter', 'pump track'], 'wheels'],
   [['diwali', 'janmashtami', 'deepavali'], 'lights'],
-  [['forest', 'bush', 'nature'], 'nature'],
+  [['forest', 'bush', 'nature', 'wildlife'], 'nature'],
   [['fair', 'carnival', 'inflatable', 'jump'], 'fair'],
   [['art', 'sculpt', 'exhibition', 'gallery', 'museum', 'prize', 'tower', 'sensory'], 'art']
 ];
@@ -238,7 +238,9 @@ function eventStart(a) {
 
 function eventEnd(a) {
   if (!a || !a.is_event) return null;
-  return parseDay(a.date_end) || parseDay(a.date_start);
+  // A null date_end means a recurring event with no known end: it is
+  // ongoing, so eventEnd returns null and isEventLive keeps it live.
+  return parseDay(a.date_end);
 }
 
 // An event is current if its last day hasn't passed. Recurring events with
